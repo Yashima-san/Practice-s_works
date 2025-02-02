@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div#content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 80%;
+            border: none;
+            margin: auto;
+            background-color: rgb(255, 251, 239);
+            padding: 12px;
+        }
+        header {
+            text-align: left;
+            background-color: #ffc27c;
+            padding: 12px;
+        }
+        footer {
+            color: brown;
+            font-size: 20px;
+            padding: 20px;
+            background-color: #ffc27c;
+            text-align: center;
+        }
+        div#logo img {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        div#name {
+            color: brown;
+            padding: 1%;
+        }
+        div#main, 
+        div#create-recipe{
+            color: #be6f15;
+        }
+        nav a {
+            padding: 10px;
+            color: #c83509;
+            font-size: 20px;
+        }
+        .name {
+            display: inline-block;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+        .name:hover {
+            transform: scale(1.10);
+        }
+        .user-actions a {
+            margin-right: 15px;
+        }
+        .edit-profile, .create-recipe {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #be6f15;
+            background-color: #fff3e0;
+        }
+        .recipe-form input, .recipe-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .recipe-form {
+            margin-top: 20px;
+        }
+        .recipe-list, .edit-profile {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Личный кабинет | Вкусный блог!</title>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <div id="logo">
+                <img src="img/logo_1.png" alt="Логотип">
+            </div>
+            <div id="name">
+                <h1 class="name"><b>Вкусный блог!</b></h1>
+            </div>
+        </header>
+        <nav>
+            <a href="index.html">Главная страница</a>
+            <a href="recipes.html">Рецепты</a>
+            <a href="kitchen.html">Виды кулинарии</a>
+            <a href="contacts.html">О нас</a>
+            <a href="user.html">Личный кабинет</a>
+        </nav>
+        <div id="main">
+            <h2>Личный кабинет</h2>
+            <p>Добро пожаловать в ваш личный кабинет! 
+                Здесь вы можете управлять своими рецептами 
+                и настройками.
+            </p>
+            <div class="user-info">
+                <h2>Ваш профиль:</h2>
+                <p><b>Имя:</b> Администратор</p>
+                <p><b>Email:</b> alirkotiaaaa@gmail.com</p>
+                <button>Редактировать профиль</button>
+            </div>
+            <div class="create-recipe">
+                <h4>Создать запись</h4>
+                <form class="recipe-form">
+                    <label for="recipe-image">Изображение:</label>
+                    <input type="file" id="recipe-image" accept="image/*">
+                    
+                    <label for="recipe-title">Название рецепта:</label>
+                    <input type="text" id="recipe-title" placeholder="Введите название">
+
+                    <label for="recipe">Рецепт:</label><br>
+                    <label for="recipe-ingredients">Ингредиенты:</label>
+                    <textarea id="recipe-ingredients" rows="4" placeholder="Введите ингредиенты"></textarea>
+                    
+                    <label for="recipe-instructions">Приготовление:</label>
+                    <textarea id="recipe-instructions" rows="6" placeholder="Введите шаги приготовления"></textarea>
+                    
+                    <button type="submit">Добавить рецепт</button>
+                </form>
+            </div>
+            <div class="recipe-list">
+                <h4>Добавленные записи:</h4>
+                <p>Пока у вас нет записей.</p>
+                <!-- Здесь будут отображаться добавленные записи -->
+            </div>
+        </div>
+        
+        <footer>
+            <b>Блог с домашними рецептами!</b>
+        </footer>
+    </div>
+</body>
+</html>
