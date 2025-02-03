@@ -1,29 +1,30 @@
 div#content{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 83%;
+    font-family: 'Segoe UI';
     border: none;
     margin: auto;
+    clear: both;
     background-color: rgb(255, 251, 239);
-    padding: 12px;
+    padding: 1em;
 }
 header{
     text-align: left;
-    width: 1200;
+    clear: left;
     background-color: #ffc27c;
-    padding: 12px;
+    padding: 1em;
     position: relative; /* Для использования псевдоэлементов */
 }
 footer{
     color: brown;
     font-size: 20px;
-    padding: 20px;
+    padding: 1em;
     background-color: #ffc27c;
     text-align: center;
+    clear: left;
 }
 div #image_1 img{
     width: 1200px;
     height: 400px;
-    float: none;
+    margin-left: 8em;
 }
 div #logo img{
     width: 100px;
