@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="СSS/style.css" rel="stylesheet" 
+        type="text/css">
+        <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8">
+        <title>Блог о вкусных блюдах</title>
+    </head>
+    <body>
+        <div id ="content">
+            <header>
+                <div id="logo">
+                    <img src="img/logo_1.png">
+                </div>
+                <div id="name">
+                    <h1 class="name"><b>Вкусный блог!</b></h1>
+                </div>
+                <div class="menu-toggle" 
+                onclick="toggleMenu()">☰</div> <!-- Иконка для открытия меню -->
+            </header>
+            <nav id="nav">
+                <a href="index.html">Главная страница</a>
+                <a href="recipes.html">Рецепты</a>
+                <div class="menu-item">
+                    <a href="kitchen.html">Виды кулинарии</a>
+                    <div class="sub-menu">
+                        <a href="kitchen_russia.html">Русская кухня</a>
+                        <a href="kitchen_turkey.html">Турецкая кухня</a>
+                        <a href="kitchen_japan.html">Японская кухня</a>
+                        <a href="kitchen_china.html">Китайская кухня</a>
+                    </div>
+                </div>
+                <a href="contacts.html">О нас</a>
+                <a href="user.html">Личный кабинет</a>
+            </nav>
+        <div id="main">
+            <p>
+                Мы рады приветствовать вас на нашем сайте! 
+                Здесь вы сможете найти разные рецепты 
+                приготовления вкусной и здоровой еды. 
+                Наша цель - сделать кулинарию доступной и 
+                приятной для всех.
+            </p>
+            <div id="image_1">
+                <img src="img/image_1.jpeg">
+            </div>
+            <h4>Виды кулинарии нашего блога:</h4>
+            <p>
+                <ui>
+                    <li><a href="kitchen_russia.html">Русская кухня</a></li>
+                    <li><a href="kitchen_turkey.html">Турецкая кухня</a></li>
+                    <li><a href="kitchen_japan.html">Японская кухня</a></li>
+                    <li><a href="kitchen_china.html">Китайская кухня</a></li>
+                </ui>
+            </p>
+            <p>
+                Многие рецепты публикуются пользователями! 
+                И если ты тоже хочешь поделиться классным рецептом,
+                то присоединяйся к нашему дружному сообществу!
+            </p>
+            <footer>
+                <b>Блог с домашними рецептами!</b>
+            </footer>
+        </div>
+        <script>
+            function toggleMenu() {
+                var nav = document.getElementById("nav");
+                nav.classList.toggle("active"); // Переключаем класс "active" для отображения меню
+            }
+        </script>
+    </body>
+</html>

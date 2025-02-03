@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="СSS/style.css" rel="stylesheet" 
+        type="text/css">
+        <meta http-equiv="Content-Type"
+        content="text/html; charset=utf-8">
+        <title>О нас | Вкусный блог!</title>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <div id="logo">
+                    <img src="img/logo_1.png">
+                </div>
+                <div id="name">
+                    <h1 class="name"><b>Вкусный блог!</b></h1>
+                </div>
+                <div class="menu-toggle" 
+                onclick="toggleMenu()">☰</div> <!-- Иконка для открытия меню -->
+            </header>
+            <nav id="nav">
+                <a href="index.html">Главная страница</a>
+                <a href="recipes.html">Рецепты</a>
+                <div class="menu-item">
+                    <a href="kitchen.html">Виды кулинарии</a>
+                    <div class="sub-menu">
+                        <a href="kitchen_russia.html">Русская кухня</a>
+                        <a href="kitchen_turkey.html">Турецкая кухня</a>
+                        <a href="kitchen_japan.html">Японская кухня</a>
+                        <a href="kitchen_china.html">Китайская кухня</a>
+                    </div>
+                </div>
+                <a href="contacts.html">О нас</a>
+                <a href="user.html">Личный кабинет</a>
+            </nav>
+                <div id="main">
+                    <h2>О нас</h2>
+                        <p>Мы - команда любителей кулинарии, которые стремятся поделиться своими знаниями и рецептиками с другими!</p>
+                        <p>Присоединяйтесь к нашему сообществу!</p>
+                    <h2>Наши контакты</h2>
+                        <table id="contacts">
+                            <tr>
+                                <td rowspan=2><a href="https://vk.com/id_kote_ybisa">Vk</a></td>
+                                <td>Официальный аккаунт в вк</td></tr>
+                            <tr>
+                            <tr>
+                                <td rowspan=2><a href="https://t.me/LiYashima">Telegram</a></td>
+                                <td>Официальный аккаунт телеграм</td></tr>
+                            <tr>
+                            <tr>
+                                <td rowspan=2><a href="mailto:alirkotiaaaa@gmail.com">Email</a></td>
+                                <td>Почта, куда стоит обращаться в случае проблем с сайтом
+                                    или для предложений по улучшению
+                                </td></tr>
+                            <tr>
+                    </table>
+                </div>
+            <footer>
+                <b>Блог с домашними рецептами!</b>
+            </footer>
+        </div>
+        <script>
+            function toggleMenu() {
+                var nav = document.getElementById("nav");
+                nav.classList.toggle("active"); // Переключаем класс "active" для отображения меню
+            }
+        </script>
+    </body>
+</html>
