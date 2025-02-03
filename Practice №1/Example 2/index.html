@@ -4,7 +4,7 @@
         <style>
             div#content{
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                width: 80%;
+                width: 83%;
                 border: none;
                 margin: auto;
                 background-color: rgb(255, 251, 239);
@@ -12,9 +12,10 @@
             }
             header{
                 text-align: left;
-                width: 1100;
+                width: 1200;
                 background-color: #ffc27c;
                 padding: 12px;
+                position: relative; /* Для использования псевдоэлементов */
             }
             footer{
                 color: brown;
@@ -26,7 +27,8 @@
             div #image_1 img{
                 width: 1200px;
                 height: 400px;
-                float: none;
+                position: sticky;
+                padding: 22px;
             }
             div #logo img{
                 width: 100px;
@@ -43,10 +45,49 @@
             li a{
                 color: #c83509;
             }
-            nav a{
+            nav {
+            display: none; /* Скрываем меню по умолчанию */
+            flex-direction: column;
+            background-color: #ffffff;
+            position: absolute; /* Позиционируем меню относительно родителя */
+            top: 50px; /* Отступ от верхней части экрана */
+            right: 10px; /* Отступ от правой части экрана */
+            border: 1px solid #be6f15;
+            z-index: 1000; /* Для поверхностного отображения */
+            padding: 10px; /* Отступы внутри меню */
+            }
+            nav a {
                 padding: 10px;
                 color: #c83509;
                 font-size: 20px;
+                border-bottom: 1px solid #ccc; /* Разделяющие линии между пунктами меню */
+                display: block; /* Обеспечиваем, чтобы все ссылки занимали весь доступный блок */
+            }
+            nav a:hover {
+                background-color: #ffc27c; /* Подсветка при наведении */
+            }
+            .menu-toggle {
+                cursor: pointer;
+                font-size: 30px;
+                color: #c83509;
+                position: absolute; /* Позиционируем иконку */
+                right: 20px; /* Отступ от правого края */
+                top: 12px; /* Отступ от верхнего края */
+            }
+            /* Для отображения меню при активации */
+            nav.active {
+                display: flex; /* Отображаем меню при активации */
+            }
+            /* Стили для подпунктов */
+            .sub-menu {
+                display: none; /* Скрываем подпункты по умолчанию */
+                padding-left: 20px; /* Отступ для подпунктов */
+            }
+            .menu-item:hover .sub-menu {
+                display: block; /* Показ подпунктов при наведении на родительский элемент */
+            }
+            #main {
+                color: #be6f15;
             }
             .name{
                 display: inline-block;
@@ -71,11 +112,21 @@
                 <div id="name">
                     <h1 class="name"><b>Вкусный блог!</b></h1>
                 </div>
+                <div class="menu-toggle" 
+                onclick="toggleMenu()">☰</div> <!-- Иконка для открытия меню -->
             </header>
-            <nav>
+            <nav id="nav">
                 <a href="index.html">Главная страница</a>
                 <a href="recipes.html">Рецепты</a>
-                <a href="kitchen.html">Виды кулинарии</a>
+                <div class="menu-item">
+                    <a href="kitchen.html">Виды кулинарии</a>
+                    <div class="sub-menu">
+                        <a href="kitchen_russia.html">Русская кухня</a>
+                        <a href="kitchen_turkey.html">Турецкая кухня</a>
+                        <a href="kitchen_japan.html">Японская кухня</a>
+                        <a href="kitchen_china.html">Китайская кухня</a>
+                    </div>
+                </div>
                 <a href="contacts.html">О нас</a>
                 <a href="user.html">Личный кабинет</a>
             </nav>
@@ -108,5 +159,11 @@
                 <b>Блог с домашними рецептами!</b>
             </footer>
         </div>
+        <script>
+            function toggleMenu() {
+                var nav = document.getElementById("nav");
+                nav.classList.toggle("active"); // Переключаем класс "active" для отображения меню
+            }
+        </script>
     </body>
 </html>
