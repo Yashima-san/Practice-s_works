@@ -7,6 +7,9 @@ div#content{
     padding: 1em;
 }
 header{
+    box-shadow: 10px 0 10px -10px #be6f15 inset, -10px 0 10px -10px
+    #be6f15 inset;
+    border: 1px solid #be6f15;
     text-align: left;
     clear: left;
     background-color: #ffc27c;
@@ -14,6 +17,9 @@ header{
     position: relative; /* Для использования псевдоэлементов */
 }
 footer{
+    box-shadow: 10px 0 10px -10px #be6f15 inset, -10px 0 10px -10px
+    #be6f15 inset;
+    border: 1px solid #be6f15;
     color: brown;
     font-size: 20px;
     padding: 1em;
@@ -37,25 +43,19 @@ div#name{
 }
 div#main{
     color: #be6f15;
+    padding-left: 2em;
+    padding-right: 2em;
 }
-li a{
-    color: #c83509;
-}
-tr a{
+li a, tr a{
     color: #c83509;
 }
 div#main, #create-recipe{
-            color: #be6f15;
-        }
-table#contacts td{
-    text-align: left;
-    border: 2px solid #be6f15;
-    padding: 5px;
+    color: #be6f15;
 }
-table#kitchen td {
-    text-align: left;
+table#contacts td, table#kitchen td {
+    text-align: center;
     border: 2px solid #be6f15;
-    padding: 5px;
+    padding: 2em;
 }
 img {
     width: 200px;
@@ -63,6 +63,7 @@ img {
     float: none;
 }
 nav {
+    list-style-type:none;
     display: none; /* Скрываем меню по умолчанию */
     flex-direction: column;
     background-color: #ffffff;
@@ -72,12 +73,15 @@ nav {
     border: 1px solid #be6f15;
     z-index: 1000; /* Для поверхностного отображения */
     padding: 10px; /* Отступы внутри меню */
+    box-shadow: 10px 0 10px -10px #be6f15 inset, -10px 0 10px -10px
+    #be6f15 inset;
 }
 nav a {
+    text-decoration:none;
     padding: 10px;
     color: #c83509;
     font-size: 20px;
-    border-bottom: 1px solid #ccc; /* Разделяющие линии между пунктами меню */
+    border-bottom: 1px solid #ffb867; /* Разделяющие линии между пунктами меню */
     display: block; /* Обеспечиваем, чтобы все ссылки занимали весь доступный блок */
 }
 nav a:hover {
@@ -132,6 +136,6 @@ nav.active {
 }
 .recipe-list, .edit-profile {
     margin-top: 30px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ff9a26;
     padding-top: 20px;
 }
