@@ -58,20 +58,35 @@ table#contacts td, table#kitchen td{
     padding: 2em;
     background-color: hsl(28, 100%, 90%);
 }
-table#news-item td{
-    width: 100%;
-    border: 2px solid #fdc687;
-    padding: 1em;
+/* Добавляем стили для таблицы новостей */
+#news-item {
+    border: 2px solid #ffa238;
+    padding: 5px;
+    width: 80em;
     background-color: hsl(28, 100%, 78%);
+    margin: auto; /* Центрируем таблицу горизонтально */
+    width: 100%;
 }
+
 #news-item td:first-child {
-    width: 20%; /* ширина первой колонки */
-    padding: 10px;
+    width: 25%; /* Устанавливаем ширину для первой ячейки */
+    overflow: hidden; /* Скрываем переполнение */
+    height: auto; /* Высота будет авто для динамического содержимого */
+    min-height: 10px; /* Минимальная высота для ячейки с изображением */
 }
+
 #news-item td:last-child {
-    width: 100%; /* ширина второй колонки */
-    padding: 20px;
-    vertical-align: text-top;
+    text-align: left;
+    width: 90%; /* Увеличиваем ширину для второй ячейки */
+    padding-left: 10px; /* Отступ слева для текста */
+}
+
+#news-item img {
+    width: 350px; /* Ширина изображения будет равна ширине ячейки */
+    height: auto; /* Высота будет пропорционально изменяться */
+    max-height: 100px; /* Ограничиваем максимальную высоту */
+    object-fit: cover; /* Обеспечивает обрезку изображения с сохранением пропорций */
+    display: block; /* Убираем отступы под изображением */
 }
 img {
     width: 200px;
