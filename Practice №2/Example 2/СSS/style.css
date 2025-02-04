@@ -46,16 +46,32 @@ div#main{
     padding-left: 2em;
     padding-right: 2em;
 }
-li a, tr a{
-    color: #c83509;
+li a, tr a, b#new{
+    color: #d93a09;
 }
 div#main, #create-recipe{
     color: #be6f15;
 }
-table#contacts td, table#kitchen td {
+table#contacts td, table#kitchen td{
     text-align: center;
     border: 2px solid #be6f15;
     padding: 2em;
+    background-color: hsl(28, 100%, 90%);
+}
+table#news-item td{
+    width: 100%;
+    border: 2px solid #fdc687;
+    padding: 1em;
+    background-color: hsl(28, 100%, 78%);
+}
+#news-item td:first-child {
+    width: 20%; /* ширина первой колонки */
+    padding: 10px;
+}
+#news-item td:last-child {
+    width: 100%; /* ширина второй колонки */
+    padding: 20px;
+    vertical-align: text-top;
 }
 img {
     width: 200px;
