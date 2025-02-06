@@ -143,8 +143,11 @@ ul, li{
     width: 100%;
     margin-bottom: 10px;
 }
+.create-recipe{
+    width: 600px;
+}
 .recipe-form {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .recipe-list, .edit-profile {
     margin-top: 30px;
