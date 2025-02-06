@@ -4,12 +4,10 @@ div#content{
     margin: auto;
     clear: both;
     background-color: rgb(255, 251, 239);
-    padding: 1em;
 }
 header{
-    box-shadow: 10px 0 10px -10px #be6f15 inset, -10px 0 10px -10px
-    #be6f15 inset;
-    border: 1px solid #be6f15;
+    box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px
+    #b26813 inset;
     text-align: left;
     clear: left;
     background-color: #ffc27c;
@@ -17,9 +15,7 @@ header{
     position: relative; /* Для использования псевдоэлементов */
 }
 footer{
-    box-shadow: 10px 0 10px -10px #be6f15 inset, -10px 0 10px -10px
-    #be6f15 inset;
-    border: 1px solid #be6f15;
+    border: 3px solid #be6f15;
     color: brown;
     font-size: 20px;
     padding: 1em;
@@ -27,11 +23,11 @@ footer{
     text-align: center;
     clear: left;
 }
-div #image_1 img{
+/*div #image_1 img{
     width: 1200px;
     height: 400px;
     margin-left: 8em;
-}
+}*/
 div #logo img{
     width: 100px;
     height: 100px;
@@ -54,16 +50,16 @@ div#main, #create-recipe{
 }
 table#contacts td, table#kitchen td{
     text-align: center;
-    border: 2px solid #be6f15;
+    border: 3px solid #be6f15;
     padding: 2em;
-    background-color: hsl(28, 100%, 90%);
+    background-color: #ffe4be;
 }
 /* Добавляем стили для таблицы новостей */
 #news-item {
-    border: 2px solid #ffa238;
+    border: 3px solid #be6f15;
     padding: 5px;
     width: 80em;
-    background-color: hsl(28, 100%, 78%);
+    background-color: #ffe4be;
     margin: auto; /* Центрируем таблицу горизонтально */
     width: 100%;
 }
@@ -94,49 +90,34 @@ img {
     float: none;
 }
 nav {
-    list-style-type:none;
-    display: none; /* Скрываем меню по умолчанию */
-    flex-direction: column;
-    background-color: #ffffff;
-    position: absolute; /* Позиционируем меню относительно родителя */
-    top: 50px; /* Отступ от верхней части экрана */
-    right: 10px; /* Отступ от правой части экрана */
-    border: 1px solid #be6f15;
-    z-index: 1000; /* Для поверхностного отображения */
-    padding: 10px; /* Отступы внутри меню */
-    box-shadow: 10px 0 10px -10px #be6f15 inset, -10px 0 10px -10px
-    #be6f15 inset;
+    display: flex; /* Размещаем элементы в ряд (горизонтально) */
+    flex-wrap: wrap; /* Если кнопок слишком много, они могут переноситься на новую строку */
+    justify-content: center; /* Центруем кнопки по горизонтали */
+    background-color: #ffe4be;
+    border: 3px solid #be6f15;
+    padding: 10px; /* Добавим немного отступов, чтобы кнопки не прижимались */
 }
+
+/* Для отдельных ссылок в меню */
 nav a {
-    text-decoration:none;
-    padding: 10px;
-    color: #c83509;
-    font-size: 20px;
-    border-bottom: 1px solid #ffb867; /* Разделяющие линии между пунктами меню */
-    display: block; /* Обеспечиваем, чтобы все ссылки занимали весь доступный блок */
+    box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px
+    #b26813 inset;
+    margin: 0 10px; /* Отступы между кнопками */
+    text-decoration: none;
+    padding: 10px 15px; /* Внутренние отступы */
+    color: #ffffff;
+    background-color: #fbc077; /* Цвет кнопок */
+    border: 3px solid #be6f15;
+    transition: background-color 0.3s; /* Плавный переход цвета */
 }
+/* Ховер-эффект для ссылок меню 
 nav a:hover {
-    background-color: #ffc27c; /* Подсветка при наведении */
-}
-.menu-toggle {
-    cursor: pointer;
-    font-size: 30px;
-    color: #c83509;
-    position: absolute; /* Позиционируем иконку */
-    right: 20px; /* Отступ от правого края */
-    top: 12px; /* Отступ от верхнего края */
-}
-/* Для отображения меню при активации */
-nav.active {
-    display: flex; /* Отображаем меню при активации */
-}
-/* Стили для подпунктов */
-.sub-menu {
-    display: none; /* Скрываем подпункты по умолчанию */
-    padding-left: 20px; /* Отступ для подпунктов */
-}
-.menu-item:hover .sub-menu {
-    display: block; /* Показ подпунктов при наведении на родительский элемент */
+    background-color: #ff8a36; /* Цвет кнопки при наведении 
+}*/
+/* Удаляем отступы для списков */
+ul, li{
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
 }
 #main {
     color: #be6f15;
@@ -155,7 +136,7 @@ nav.active {
 .edit-profile, .create-recipe {
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid #be6f15;
+    border: 3px solid #be6f15;
     background-color: #fff3e0;
 }
 .recipe-form input, .recipe-form textarea {
@@ -167,6 +148,6 @@ nav.active {
 }
 .recipe-list, .edit-profile {
     margin-top: 30px;
-    border-top: 1px solid #ff9a26;
+    border-top: 3px solid #ffe4be;
     padding-top: 20px;
 }
