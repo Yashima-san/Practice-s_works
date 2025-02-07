@@ -90,18 +90,41 @@ img {
     float: none;
 }
 nav {
-    display: flex; /* Размещаем элементы в ряд (горизонтально) */
-    flex-wrap: wrap; /* Если кнопок слишком много, они могут переноситься на новую строку */
-    justify-content: center; /* Центруем кнопки по горизонтали */
+    display: flex;
+    flex-direction: row; /* По умолчанию горизонтальное меню */
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: #ffe4be;
     border: 3px solid #be6f15;
-    padding: 10px; /* Добавим немного отступов, чтобы кнопки не прижимались */
+    padding: 10px;
 }
 
-/* Для отдельных ссылок в меню */
+nav.vertical {
+    flex-direction: column; /* Вертикальное меню */
+    justify-content: center; /* Выравнивание*/
+    font-size: 20px;
+    text-align: center;
+}
+nav a.vertical{
+    width: 50%;
+}
+nav.vertical a {
+    box-shadow: 50px 0 50px -50px #b26813 inset, -50px 0 50px -50px #b26813 inset;
+    margin: 5px 0; /* Увеличиваем промежутки между кнопками */
+}
+
+button#toggle-nav{
+    float: right;
+    color: #d93a09;
+    background-color: #fbc077;
+    border: 3px solid #be6f15;
+}
+nav.hidden {
+    display: none; /* Скрываем навигационное меню */
+}
+/* Остальные стили для ссылок в меню */
 nav a {
-    box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px
-    #b26813 inset;
+    box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px #b26813 inset;
     margin: 0 10px; /* Отступы между кнопками */
     text-decoration: none;
     padding: 10px 15px; /* Внутренние отступы */
@@ -110,6 +133,7 @@ nav a {
     border: 3px solid #be6f15;
     transition: background-color 0.3s; /* Плавный переход цвета */
 }
+
 /* Ховер-эффект для ссылок меню 
 nav a:hover {
     background-color: #ff8a36; /* Цвет кнопки при наведении 

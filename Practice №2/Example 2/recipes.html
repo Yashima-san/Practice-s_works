@@ -15,6 +15,7 @@
                 </div>
                 <div id="name">
                     <h1 class="name"><b>Вкусный блог!</b></h1>
+                    <button id="toggle-nav">☰</button> <!-- Кнопка "бургер" для переключения навигации -->
                 </div>
             </header>
             <nav id="nav">
@@ -60,11 +61,26 @@
             <footer>
                 <b>Блог с домашними рецептами!</b>
             </footer>
-        <script>
-            function toggleMenu() {
-                var nav = document.getElementById("nav");
-                nav.classList.toggle("active"); // Переключаем класс "active" для отображения меню
-            }
-        </script>
+            <script>
+                const toggleButton = document.getElementById('toggle-nav');
+                const nav = document.getElementById('nav');
+                // Проверяем состояние меню при загрузке страницы
+                window.onload = () => {
+                    if (localStorage.getItem('navState') === 'vertical') {
+                        nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+                    } else {
+                        nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
+                    }
+                };
+                toggleButton.addEventListener('click', () => {
+                    if (nav.classList.contains('vertical')) {
+                        nav.classList.remove('vertical', 'active'); // Убираем вертикальное меню
+                        localStorage.setItem('navState', 'horizontal'); // Сохраняем горизонтальное состояние
+                    } else {
+                        nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+                        localStorage.setItem('navState', 'vertical'); // Сохраняем вертикальное состояние
+                    }
+                });
+            </script>
     </body>
 </html>
