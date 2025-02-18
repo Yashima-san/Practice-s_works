@@ -3,7 +3,8 @@ div#content{
     border: none;
     margin: auto;
     clear: both;
-    background-color: rgb(255, 251, 239);
+    background-color: rgb(255, 243, 214);
+    width: 80%;
 }
 header{
     box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px
@@ -91,49 +92,42 @@ img {
 }
 nav {
     display: flex;
-    flex-direction: row; /* По умолчанию горизонтальное меню */
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Вертикальное меню */
+    justify-content: center; /* Выравнивание по центру */
+    text-align: center;
+    font-size: 16px;
     background-color: #ffe4be;
     border: 3px solid #be6f15;
+    width: 10%;
     padding: 10px;
+    position: absolute; /* Абсолютное позиционирование меню */
+    right: 0%;
+    top: 8px;
 }
-
-nav.vertical {
-    flex-direction: column; /* Вертикальное меню */
-    justify-content: center; /* Выравнивание*/
-    font-size: 20px;
-    text-align: center;
-}
-nav a.vertical{
-    width: 50%;
-}
-nav.vertical a {
-    box-shadow: 50px 0 50px -50px #b26813 inset, -50px 0 50px -50px #b26813 inset;
-    margin: 5px 0; /* Увеличиваем промежутки между кнопками */
-}
-
-button#toggle-nav{
+button#toggle-nav {
     float: right;
     color: #d93a09;
     background-color: #fbc077;
     border: 3px solid #be6f15;
 }
-nav.hidden {
-    display: none; /* Скрываем навигационное меню */
-}
+
 /* Остальные стили для ссылок в меню */
 nav a {
-    box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px #b26813 inset;
-    margin: 0 10px; /* Отступы между кнопками */
+    box-shadow: 50px 0 50px -50px #b26813 inset, -50px 0 50px -50px #b26813 inset;
+    margin: 5px 0; /* Увеличиваем промежутки между кнопками */
     text-decoration: none;
     padding: 10px 15px; /* Внутренние отступы */
     color: #ffffff;
     background-color: #fbc077; /* Цвет кнопок */
     border: 3px solid #be6f15;
+    width: 80%;
     transition: background-color 0.3s; /* Плавный переход цвета */
+    margin-left: auto; /* Автоматический отступ слева */
+    margin-right: auto; /* Автоматический отступ справа */
 }
-
+nav.hidden {
+    display: none; /* Скрываем навигационное меню */
+}
 /* Ховер-эффект для ссылок меню 
 nav a:hover {
     background-color: #ff8a36; /* Цвет кнопки при наведении 
