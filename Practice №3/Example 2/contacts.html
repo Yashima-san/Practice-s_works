@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="kit/css/bootstrap.min.css">
+        <!-- Собственные стили -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="icon" href="/Practice №3/Example 2/img/logo_1.ico"
+        type="image/x-icon"> 
+        <title>О нас | Вкусный блог!</title>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <div id="logo">
+                    <img src="img/logo_1.png">
+                </div>
+                <div id="name">
+                    <h1 class="name"><b>Вкусный блог!</b></h1>
+                </div>
+            </header>
+            <nav id="nav">
+                <a href="index.html">Главная страница</a>
+                <a href="recipes.html">Рецепты</a>
+                <a href="kitchen.html">Виды кулинарии</a>
+                <a href="contacts.html">О нас</a>
+                <a href="user.html">Личный кабинет</a>
+            </nav>
+                <div id="main">
+                    <h2>О нас</h2>
+                        <p>Мы - команда любителей кулинарии, которые стремятся поделиться своими знаниями и рецептиками с другими!</p>
+                        <p>Присоединяйтесь к нашему сообществу!</p>
+                    <h2>Наши контакты</h2>
+                        <table id="contacts">
+                            <tr>
+                                <td rowspan=2><a href="https://vk.com/id_kote_ybisa">Vk</a></td>
+                                <td>Официальный аккаунт в вк</td></tr>
+                            <tr>
+                            <tr>
+                                <td rowspan=2><a href="https://t.me/LiYashima">Telegram</a></td>
+                                <td>Официальный аккаунт телеграм</td></tr>
+                            <tr>
+                            <tr>
+                                <td rowspan=2><a href="mailto:alirkotiaaaa@gmail.com">Email</a></td>
+                                <td>Почта, куда стоит обращаться в случае проблем с сайтом
+                                    или для предложений по улучшению
+                                </td></tr>
+                            <tr>
+                    </table>
+                    <br><br><br>
+                </div>
+            <footer>
+                <b>Блог с домашними рецептами!</b>
+            </footer>
+            <script>
+                const toggleButton = document.getElementById('toggle-nav');
+                const nav = document.getElementById('nav');
+                // Проверяем состояние меню при загрузке страницы
+                window.onload = () => {
+                    if (localStorage.getItem('navState') === 'vertical') {
+                        nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+                    } else {
+                        nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
+                    }
+                };
+            </script>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="kit/css/bootstrap.min.css">
+        <!-- Собственные стили -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="icon" href="/Practice №3/Example 2/img/logo_1.ico"
+  type="image/x-icon"> 
+  <title>Русская кухня | Вкусный блог!</title>
+</head>
+<body>
+  <div id="content">
+    <header>
+      <div id="logo">
+        <img src="img/logo_1.png" alt="Логотип">
+      </div>
+      <div id="name">
+        <h1 class="name"><b>Вкусный блог!</b></h1>
+      </div>
+    </header>
+    <nav id="nav">
+      <a href="index.html">Главная страница</a>
+      <a href="recipes.html">Рецепты</a>
+      <a href="kitchen.html">Виды кулинарии</a>
+      <a href="contacts.html">О нас</a>
+      <a href="user.html">Личный кабинет</a>
+  </nav>
+    <div id="main">
+      <h2>Русская кухня</h2>
+      <p>Русская кухня известна своим разнообразием и обильными порциями, с использованием местных продуктов.</p>
+      <p>Мы предоставляем вам три наших любимых рецепта!</p>
+      <table id="kitchen">
+        <tr>
+          <td><b>Изображение:</b></td>
+          <td><b>Название блюда:</b></td>
+          <td><b>Рецепт:</b></td>
+        </tr>
+        <tr>
+          <td rowspan="1"><img src="img/image_5.jpg" alt="Борщ"></td>
+          <td>Борщ</td>
+          <td><b>Ингредиенты:</b>
+            свекла — 300 г;
+            капуста — 150 г;
+            картофель — 2 шт.;
+            морковь — 1 шт.;
+            лук — 1 шт.;
+            помидоры — 2 шт.;
+            бульон — 1,5 л;
+            масло растительное — 2 ст. л.;
+            укроп, соль и перец по вкусу.
+            <p><b>Приготовление:</b>
+              Очистить и нарезать свеклу, морковь, лук и картофель.
+              Обжарить лук с морковкой на растительном масле до легкого золотистого цвета.
+              Добавить свеклу и тушить 10 минут, затем добавить помидоры и немного 
+              воды, проварить.
+              В бульон добавить картошку и капусту, варить до готовности.
+              Добавить зажарку из свеклы и по вкусу укроп, соль и перец.</p>
+              <b>Приятного аппетита!</b></td>
+        </tr>
+        <tr>
+          <td rowspan="1"><img src="img/image_6.jpg" alt="Пельмени"></td>
+          <td>Пельмени</td>
+          <td><b>Ингредиенты:</b>
+            мука — 500 г;
+            вода — 200 мл;
+            яйца — 1 шт.;
+            мясо (свинина и говядина) — 400 г;
+            лук — 1 шт.;
+            соль и перец по вкусу.
+            <p><b>Приготовление:</b>
+              Замесить тесто из муки, воды и яйца, оставить на 30 минут.
+              Мясо и лук прокрутить через мясорубку, добавить соль и перец.
+              Раскатать тесто, вырезать кружки, начинить их мясной начинкой и 
+              защипнуть края.
+              Варить в подсоленной воде 10-15 минут до готовности.</p>
+              <b>Приятного аппетита!</b></td>
+        </tr>
+        <tr>
+          <td rowspan="1"><img src="img/image_7.jpg" alt="Сырники"></td>
+          <td>Сырники</td>
+          <td><b>Ингредиенты:</b>
+            творог — 500 г;
+            яйцо — 1 шт.;
+            сахар — 2 ст. л.;
+            мука — 5 ст. л.;
+            разрыхлитель — 1 ч. л.;
+            растительное масло — для жарки.
+            <p><b>Приготовление:</b>
+              Творог отжать, смешать с яйцом, сахаром, мукой и разрыхлителем.
+              Сформировать круглые лепешки.
+              Обжарить на сковороде с растительным маслом до золотистой 
+              корочки с обеих сторон.
+              Подавать горячими со сметаной или медом или что-нибудь другое 
+              на ваше усмотрение.</p>
+              <b>Приятного аппетита!</b></td>
+        </tr>
+      </table>
+    </div>
+    <footer>
+      <b>Блог с домашними рецептами!</b>
+    </footer>
+  </div>
+  <script>
+    const toggleButton = document.getElementById('toggle-nav');
+    const nav = document.getElementById('nav');
+    // Проверяем состояние меню при загрузке страницы
+    window.onload = () => {
+        if (localStorage.getItem('navState') === 'vertical') {
+            nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+        } else {
+            nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
+        }
+    };
+    toggleButton.addEventListener('click', () => {
+        if (nav.classList.contains('vertical')) {
+            nav.classList.remove('vertical', 'active'); // Убираем вертикальное меню
+            localStorage.setItem('navState', 'horizontal'); // Сохраняем горизонтальное состояние
+        } else {
+            nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+            localStorage.setItem('navState', 'vertical'); // Сохраняем вертикальное состояние
+        }
+    });
+</script>
+</body>
+</html>

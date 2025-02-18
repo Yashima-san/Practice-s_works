@@ -1,0 +1,104 @@
+/* Оформление содержимого всей страницы по умолчанию */
+.body-top {
+    width: 80%;
+    border: none;
+    margin: auto;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-size: normal;
+    font-weight: bold;
+    text-align: center;
+}
+/* Страница занимает 100% экрана по высоте */
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 70px;
+}
+/* Заголовок */
+.header {
+    background-color: #ffc27c;
+}
+
+/* Подвал документа */
+.footer {
+    border: 3px solid #be6f15;
+    color: brown;
+    font-size: 20px;
+    background-color: #ffc27c;
+    text-align: center;
+    clear: left;
+}
+/* Логотип */
+#logo {
+    width: 100px;
+    height: 100px;
+}
+/* Имя */
+.name {
+    color: brown;
+}
+.image_0{
+    width: 50px;
+    height: 20px;
+}
+/* Навигационное меню */
+#menu {
+    display: flex;
+    flex-direction: column; /* Вертикальное меню */
+    justify-content: center; /* Выравнивание по центру */
+    text-align: center;
+    font-size: 16px;
+    background-color: #ffe4be;
+    border: 3px solid #be6f15;
+    width: 10%;
+    padding: 10px;
+    position: absolute; /* Абсолютное позиционирование меню */
+    right: 0;
+    top: 8px;
+}
+
+/* Стили для ссылок в меню */
+#menu a {
+    box-shadow: 50px 0 50px -50px #b26813 inset, -50px 0 50px -50px #b26813 inset;
+    margin: 5px 0; /* Промежутки между кнопками */
+    text-decoration: none;
+    padding: 10px 15px; /* Внутренние отступы */
+    color: #ffffff;
+    background-color: #fbc077; /* Цвет кнопок */
+    border: 3px solid #be6f15;
+    width: 80%;
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    margin-left: auto; /* Автоматический отступ слева */
+    margin-right: auto; /* Автоматический отступ справа */
+}
+/* "Плавающее" в зависимости от изменения экрана название */
+.col-9 {
+    display: flex;
+}
+/* Заголовок в плавающем окне по центру */
+h1 {
+    margin: auto;
+}
+/* Размер логотипа для средних и больших экранов */
+@media screen and (max-width: 653px) {
+    #logo {
+        max-width: 100px;
+        max-height: 70px;
+    }
+    h1 {
+        font-size: 14px;
+    }
+}
+/* Элементы списков */
+ul, li {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+/* Удаление стилей для ссылок в других местах, если необходимо */
+a {
+    color: inherit; /* Убираем нежелательные стили */
+}

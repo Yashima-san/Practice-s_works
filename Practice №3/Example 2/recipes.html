@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="kit/css/bootstrap.min.css">
+        <!-- Собственные стили -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="icon" href="/Practice №3/Example 2/img/logo_1.ico"
+        type="image/x-icon"> 
+        <title>Рецепты | Вкусный блог!</title>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <div id="logo">
+                    <img src="img/logo_1.png">
+                </div>
+                <div id="name">
+                    <h1 class="name"><b>Вкусный блог!</b></h1>
+                </div>
+            </header>
+            <nav id="nav">
+                <a href="index.html">Главная страница</a>
+                <a href="recipes.html">Рецепты</a>
+                <a href="kitchen.html">Виды кулинарии</a>
+                <a href="contacts.html">О нас</a>
+                <a href="user.html">Личный кабинет</a>
+            </nav>
+        <div id="main">
+            <h2>Рецепты</h2>
+            <p>Здесь вы найдёте рецепты от наших пользователей.</p>
+            <p>Вы также можете опубликовать свой рецепт! Просто зайдите
+                в свой личный кабинет^^</p>
+            <table id="kitchen">
+                <tr>
+                    <td><b>Изображение:</b></td>
+                    <td><b>Название блюда:</b></td>
+                    <td><b>Рецепт:</b></td>
+                    <td><b>Опубликовал:</b></td>
+                </tr>
+                <tr>
+                    <td rowspan="1"><img src="img/image_11.jpg" alt="Жа Дзяо Мянь"></td>
+                    <td>Жа Дзяо Мянь</td>
+                    <td><b>Ингредиенты:</b>
+                    лапша — 300 г;
+                    свиной фарш — 200 г;
+                    паста из ферментированных бобов — 2 ст. л.;
+                    огурец — 1 шт.;
+                    зеленый лук — 2 пера;
+                    соевый соус — по вкусу.
+                    <p><b>Приготовление:</b>
+                    Отварить лапшу согласно инструкции 
+                    на упаковке. Обжарить свиной фарш с 
+                    пастой из ферментированных бобов до готовности. 
+                    Нарезать огурец и зеленый лук. Собрать 
+                    блюдо: положить лапшу, сверху – фарш, 
+                    огурцы и лук.</p><b>Приятного аппетита!</b>
+                    <td rowspan="1">Гномик(>0u)</td>
+                </tr>
+            </table>
+            </div>
+            <footer>
+                <b>Блог с домашними рецептами!</b>
+            </footer>
+            <script>
+                const toggleButton = document.getElementById('toggle-nav');
+                const nav = document.getElementById('nav');
+                // Проверяем состояние меню при загрузке страницы
+                window.onload = () => {
+                    if (localStorage.getItem('navState') === 'vertical') {
+                        nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+                    } else {
+                        nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
+                    }
+                };
+                toggleButton.addEventListener('click', () => {
+                    if (nav.classList.contains('vertical')) {
+                        nav.classList.remove('vertical', 'active'); // Убираем вертикальное меню
+                        localStorage.setItem('navState', 'horizontal'); // Сохраняем горизонтальное состояние
+                    } else {
+                        nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+                        localStorage.setItem('navState', 'vertical'); // Сохраняем вертикальное состояние
+                    }
+                });
+            </script>
+    </body>
+</html>
