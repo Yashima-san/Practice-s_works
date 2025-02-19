@@ -1,4 +1,4 @@
-/* Оформление содержимого всей страницы по умолчанию */
+/* Общие стили */
 .body-top {
     width: 80%;
     border: none;
@@ -7,20 +7,32 @@
     font-style: normal;
     font-size: normal;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    padding: 5px;
 }
-/* Страница занимает 100% экрана по высоте */
+
+/* Страница занимает 100% экрана по высоте (не обязательно с Bootstrap, но может быть полезно) */
 html {
     height: 100%;
 }
+
 body {
     min-height: 100%;
     position: relative;
-    padding-bottom: 70px;
+    padding-bottom: 70px; /* Чтобы контент не перекрывал футер */
+
 }
+
 /* Заголовок */
 .header {
     background-color: #ffc27c;
+    box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px #b26813 inset;
+    text-align: left; /* Выравнивание текста в заголовке */
+    clear: left;
+    padding: 1em;
+    position: relative; /* Для использования псевдоэлементов */
+    width: 80%;
+    margin: auto;
 }
 
 /* Подвал документа */
@@ -31,74 +43,192 @@ body {
     background-color: #ffc27c;
     text-align: center;
     clear: left;
+    width: 80%;
+    margin: auto;
 }
+
 /* Логотип */
-#logo {
+.header img { /* Используем класс header, чтобы логотип находился в заголовке */
     width: 100px;
     height: 100px;
+    float: left;
 }
-/* Имя */
-.name {
-    color: brown;
-}
-.image_0{
-    width: 50px;
-    height: 20px;
-}
+
 /* Навигационное меню */
 #menu {
     display: flex;
-    flex-direction: column; /* Вертикальное меню */
-    justify-content: center; /* Выравнивание по центру */
+    flex-direction: row; /* Вертикальное меню */
+    justify-content: center;
     text-align: center;
     font-size: 16px;
+    padding: 10px;
     background-color: #ffe4be;
     border: 3px solid #be6f15;
-    width: 10%;
-    padding: 10px;
-    position: absolute; /* Абсолютное позиционирование меню */
-    right: 0;
-    top: 8px;
+    width: 80%;
+    margin: auto;
 }
-
 /* Стили для ссылок в меню */
 #menu a {
     box-shadow: 50px 0 50px -50px #b26813 inset, -50px 0 50px -50px #b26813 inset;
-    margin: 5px 0; /* Промежутки между кнопками */
+    margin: 5px 0px; /* Увеличиваем промежутки между кнопками */
+    width: 30%;
     text-decoration: none;
-    padding: 10px 15px; /* Внутренние отступы */
+    padding: 10px; /* Внутренние отступы */
     color: #ffffff;
     background-color: #fbc077; /* Цвет кнопок */
     border: 3px solid #be6f15;
-    width: 80%;
-    transition: background-color 0.3s; /* Плавный переход цвета */
     margin-left: auto; /* Автоматический отступ слева */
     margin-right: auto; /* Автоматический отступ справа */
 }
-/* "Плавающее" в зависимости от изменения экрана название */
-.col-9 {
+/* Ховер-эффект для ссылок меню */
+.navbar a:hover {
+    background-color: #ff8a36;
+}
+
+/* "Плавающее" название */
+.name { /* Используется класс из Bootstrap для колонок */
     display: flex;
 }
+
 /* Заголовок в плавающем окне по центру */
-h1 {
+.name h1 { /* Используем класс header */
     margin: auto;
 }
+
 /* Размер логотипа для средних и больших экранов */
 @media screen and (max-width: 653px) {
-    #logo {
+    .header img {
         max-width: 100px;
-        max-height: 70px;
+        max-height: 100px;
     }
     h1 {
         font-size: 14px;
     }
 }
+
 /* Элементы списков */
 ul, li {
-    list-style-type: none; /* Убираем маркеры списка */
+    list-style-type: none;
     padding: 0;
 }
-/* Удаление стилей для ссылок в других местах, если необходимо */
+
+/* Ссылки */
 a {
-    color: inherit; /* Убираем нежелательные стили */
+    color: #d93a09; /* Цвет ссылок */
+    text-decoration: none;
+}
+
+/* Основной контент */
+.container {
+    color: #be6f15;
+    background-color: rgb(255, 243, 214); /* Фон как во втором CSS */
+
+}
+
+/* Класс для выделения "NEW" */
+#new {
+    color: #d93a09; /* Цвет как у ссылок */
+}
+
+/* Таблица новостей */
+#tab_kit {
+    border: 3px solid #be6f15;
+    padding: 5px;
+    background-color: #ffe4be;
+    margin: auto;
+    width: 100%; /* Занимает всю ширину родителя */
+}
+
+.news-item td:first-child {
+    width: 25%; /* Устанавливаем ширину для первой ячейки */
+    overflow: hidden; /* Скрываем переполнение */
+    height: auto; /* Высота будет авто для динамического содержимого */
+    min-height: 10px; /* Минимальная высота для ячейки с изображением */
+}
+
+.news-item td:last-child {
+    text-align: left;
+    width: 90%; /* Увеличиваем ширину для второй ячейки */
+    padding-left: 10px; /* Отступ слева для текста */
+}
+
+.news-item img {
+    width: 350px; /* Ширина изображения будет равна ширине ячейки */
+    height: auto; /* Высота будет пропорционально изменяться */
+    max-height: 100px; /* Ограничиваем максимальную высоту */
+    object-fit: cover; /* Обеспечивает обрезку изображения с сохранением пропорций */
+    display: block; /* Убираем отступы под изображением */
+}
+
+/* Адаптация изображений */
+#image_0 { /* Для изображений в новостях */
+    width: 350px;
+    height: auto;
+    max-height: 100px;
+    object-fit: cover;
+    display: block;
+}
+/* Для изображений, которые не в новостях (например, логотип) */
+img {
+    width: 200px;
+    height: 150px;
+    float: none; /* Убираем float */
+}
+
+/* Остальные стили для ссылок в меню */
+.navbar a {
+    color: #ffffff; /* Цвет текста */
+    background-color: #fbc077; /* Цвет фона */
+    text-decoration: none;
+}
+
+/* Скрываем навигацию, если это необходимо */
+.navbar.hidden {
+    display: none;
+}
+
+/* Стили для имени */
+.name {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.name:hover {
+    transform: scale(1.10);
+}
+
+.user-actions a {
+    margin-right: 15px;
+}
+
+.edit-profile, .create-recipe {
+    margin-top: 20px;
+    padding: 10px;
+    border: 3px solid #be6f15;
+    background-color: #fff3e0;
+}
+
+.recipe-form input, .recipe-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.create-recipe {
+    width: 600px;
+}
+
+.recipe-form {
+    margin-top: 10px;
+}
+
+.recipe-list, .edit-profile {
+    margin-top: 30px;
+    border-top: 3px solid #ffe4be;
+    padding-top: 20px;
+}
+/*Центрирование контента*/
+.container {
+    width: 80%;
+    margin: auto;
 }
