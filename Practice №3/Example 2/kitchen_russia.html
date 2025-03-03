@@ -9,94 +9,116 @@
     <link rel="icon" href="img/logo_1.ico" type="image/x-icon"> 
   <title>Русская кухня | Вкусный блог!</title>
 </head>
-<body>
-  <div id="content">
-    <header>
-      <div id="logo">
-        <img src="img/logo_1.png" alt="Логотип">
+<body class="body-top">
+  <!-- Заголовок -->
+  <header class="header">
+    <div class="row">
+      <div class="col-3">
+        <img id="logo" src="img/logo_1.png" alt="Логотип">
       </div>
-      <div id="name">
+      <div class="col-9">
         <h1 class="name"><b>Вкусный блог!</b></h1>
       </div>
-    </header>
-    <nav id="nav">
-      <a href="index.html">Главная страница</a>
-      <a href="recipes.html">Рецепты</a>
-      <a href="kitchen.html">Виды кулинарии</a>
-      <a href="contacts.html">О нас</a>
-      <a href="user.html">Личный кабинет</a>
-  </nav>
-    <div id="main">
-      <h2>Русская кухня</h2>
+    </div>
+  </header>
+  <!-- Навигационное меню -->
+  <div id="menu">
+    <nav class="navbar">
+      <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная страница</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="recipes.html">Рецепты</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="kitchen.html">Виды кулинарии</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">О нас</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="user.html">Личный кабинет</a>
+    </nav>
+  </div>
+    <!-- Основной контент -->
+    <main class="container">
+      <br><h4>Русская кухня</h4>
       <p>Русская кухня известна своим разнообразием и обильными порциями, с использованием местных продуктов.</p>
       <p>Мы предоставляем вам три наших любимых рецепта!</p>
-      <table id="kitchen">
-        <tr>
-          <td><b>Изображение:</b></td>
-          <td><b>Название блюда:</b></td>
-          <td><b>Рецепт:</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_5.jpg" alt="Борщ"></td>
-          <td>Борщ</td>
-          <td><b>Ингредиенты:</b>
-            свекла — 300 г;
-            капуста — 150 г;
-            картофель — 2 шт.;
-            морковь — 1 шт.;
-            лук — 1 шт.;
-            помидоры — 2 шт.;
-            бульон — 1,5 л;
-            масло растительное — 2 ст. л.;
-            укроп, соль и перец по вкусу.
-            <p><b>Приготовление:</b>
+      <div class="tab_kit card mb-3" style="max-width: 1200px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img id="img" src="img/image_5.jpg" class="img-fluid rounded-start" alt="Борщ"></td>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">Борщ</h5>
+            <p class="card-text"><b>Ингредиенты:</b><br>
+            свекла — 300 г;<br>
+            капуста — 150 г;<br>
+            картофель — 2 шт.;<br>
+            морковь — 1 шт.;<br>
+            лук — 1 шт.;<br>
+            помидоры — 2 шт.;<br>
+            бульон — 1,5 л;<br>
+            масло растительное — 2 ст. л.;<br>
+            укроп, соль и перец по вкусу.<br>
+            <p class="card-text"><b>Приготовление:</b><br>
               Очистить и нарезать свеклу, морковь, лук и картофель.
               Обжарить лук с морковкой на растительном масле до легкого золотистого цвета.
               Добавить свеклу и тушить 10 минут, затем добавить помидоры и немного 
               воды, проварить.
               В бульон добавить картошку и капусту, варить до готовности.
-              Добавить зажарку из свеклы и по вкусу укроп, соль и перец.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_6.jpg" alt="Пельмени"></td>
-          <td>Пельмени</td>
-          <td><b>Ингредиенты:</b>
-            мука — 500 г;
-            вода — 200 мл;
-            яйца — 1 шт.;
-            мясо (свинина и говядина) — 400 г;
-            лук — 1 шт.;
-            соль и перец по вкусу.
-            <p><b>Приготовление:</b>
+              Добавить зажарку из свеклы и по вкусу укроп, соль и перец.<br>
+              <b>Приятного аппетита!</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab_kit card mb-3" style="max-width: 1200px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+              <img id="img" src="img/image_6.jpg" class="img-fluid rounded-start" alt="Пельмени"></td>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Пельмени</h5>
+            <p class="card-text"><b>Ингредиенты:</b><br>
+            мука — 500 г;<br>
+            вода — 200 мл;<br>
+            яйца — 1 шт.;<br>
+            мясо (свинина и говядина) — 400 г;<br>
+            лук — 1 шт.;<br>
+            соль и перец по вкусу.<br>
+            <p class="card-text"><b>Приготовление:</b><br>
               Замесить тесто из муки, воды и яйца, оставить на 30 минут.
               Мясо и лук прокрутить через мясорубку, добавить соль и перец.
               Раскатать тесто, вырезать кружки, начинить их мясной начинкой и 
               защипнуть края.
-              Варить в подсоленной воде 10-15 минут до готовности.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_7.jpg" alt="Сырники"></td>
-          <td>Сырники</td>
-          <td><b>Ингредиенты:</b>
-            творог — 500 г;
-            яйцо — 1 шт.;
-            сахар — 2 ст. л.;
-            мука — 5 ст. л.;
-            разрыхлитель — 1 ч. л.;
-            растительное масло — для жарки.
-            <p><b>Приготовление:</b>
+              Варить в подсоленной воде 10-15 минут до готовности.<br>
+              <b>Приятного аппетита!</b></p>
+            </div>
+          </div>
+      </div>
+  </div>
+  <div class="tab_kit card mb-3" style="max-width: 1200px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+          <img id="img" src="img/image_7.jpg" class="img-fluid rounded-start" alt="Итальянские канолли">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Сырники</h5>
+          <p class="card-text"><b>Ингредиенты:</b><br>
+            творог — 500 г;<br>
+            яйцо — 1 шт.;<br>
+            сахар — 2 ст. л.;<br>
+            мука — 5 ст. л.;<br>
+            разрыхлитель — 1 ч. л.;<br>
+            растительное масло — для жарки.<br></p>
+          <p class="card-text"><b>Приготовление:</b><br>
               Творог отжать, смешать с яйцом, сахаром, мукой и разрыхлителем.
               Сформировать круглые лепешки.
               Обжарить на сковороде с растительным маслом до золотистой 
               корочки с обеих сторон.
               Подавать горячими со сметаной или медом или что-нибудь другое 
-              на ваше усмотрение.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-      </table>
-    </div>
+              на ваше усмотрение.<br>
+              <b>Приятного аппетита!</b></p>
+            </div>
+          </div>
+      </div>
+  </div>
     <footer>
       <b>Блог с домашними рецептами!</b>
     </footer>

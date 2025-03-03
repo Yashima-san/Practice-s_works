@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,89 +9,121 @@
   <link rel="icon" href="img/logo_1.ico" type="image/x-icon"> 
   <title>Китайская кухня | Вкусный блог!</title>
 </head>
-<body>
-  <div id="content">
-    <header>
-      <div id="logo">
-        <img src="img/logo_1.png" alt="Логотип">
+<body class="body-top">
+  <!-- Заголовок -->
+  <header class="header">
+    <div class="row">
+      <div class="col-3">
+        <img id="logo" src="img/logo_1.png" alt="Логотип">
       </div>
-      <div id="name">
+      <div class="col-9">
         <h1 class="name"><b>Вкусный блог!</b></h1>
       </div>
-    </header>
-    <nav id="nav">
-      <a href="index.html">Главная страница</a>
-      <a href="recipes.html">Рецепты</a>
-      <a href="kitchen.html">Виды кулинарии</a>
-      <a href="contacts.html">О нас</a>
-      <a href="user.html">Личный кабинет</a>
-  </nav>
-    <div id="main">
-      <h2>Китайская кухня</h2>
-      <p>Китайская кухня известна своим разнообразием, оригинальными вкусами и большим количеством приправ.</p>
-      <p>Мы представляем вам три наших любимых рецепта!</p>
-      <table id="kitchen">
-        <tr>
-          <td><b>Изображение:</b></td>
-          <td><b>Название блюда:</b></td>
-          <td><b>Рецепт:</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_11.jpg" alt="Жа Дзяо Мянь"></td>
-          <td>Жа Дзяо Мянь</td>
-          <td><b>Ингредиенты:</b>
-            лапша — 300 г;
-            свиной фарш — 200 г;
-            паста из ферментированных бобов — 2 ст. л.;
-            огурец — 1 шт.;
-            зеленый лук — 2 пера;
-            соевый соус — по вкусу.
-            <p><b>Приготовление:</b>
-              Отварить лапшу согласно инструкции на упаковке. Обжарить свиной фарш с пастой из ферментированных бобов до готовности. 
-              Нарезать огурец и зеленый лук. Собрать блюдо: положить лапшу, сверху – фарш, огурцы и лук.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_12.jpg" alt="Гун Бао Цзы Рен"></td>
-          <td>Гун Бао Цзы Рен</td>
-          <td><b>Ингредиенты:</b>
-            куриное филе — 300 г;
-            арахис — 100 г;
-            сладкий перец — 1 шт.;
-            имбирь — 1 ч. л. натертого;
-            чеснок — 2 зубчика;
-            соевый соус — 3 ст. л.;
-            кунжутное масло — 1 ст. л.
-            <p><b>Приготовление:</b>
-              Куриное филе нарезать кубиками, обжарить на сковороде. 
-              Затем добавить имбирь, чеснок и нарезанный перец, обжарить еще несколько минут. 
-              Добавить арахис и соевый соус. Обжаривать 2-3 минуты и подать с рисом.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_13.jpg" alt="Бао Цзы"></td>
-          <td>Бао Цзы</td>
-          <td><b>Ингредиенты:</b>
-            мука — 500 г;
-            вода — 250 мл;
-            дрожжи — 1 ч. л.;
-            свиной фарш — 400 г;
-            капуста — 100 г;
-            имбирь — 1 ч. л.;
-            соевый соус — по вкусу.
-            <p><b>Приготовление:</b>
-              Замесить тесто из муки, воды и дрожжей, оставить подниматься. 
-              Фарш смешать с капустой и имбирем, добавить соевый соус. 
-              Раскатать тесто, разделить на порции и завернуть начинку. 
-              Приготовить на пару 15-20 минут.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-      </table>
     </div>
-    <footer>
-      <b>Блог с домашними рецептами!</b>
-    </footer>
+  </header>
+  <!-- Навигационное меню -->
+  <div id="menu">
+    <nav class="navbar">
+      <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная страница</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="recipes.html">Рецепты</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="kitchen.html">Виды кулинарии</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">О нас</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="user.html">Личный кабинет</a>
+    </nav>
   </div>
+  <!-- Основной контент -->
+  <main class="container">
+    <br><h4>Китайская кухня</h4>
+    <p>Китайская кухня известна своим разнообразием, оригинальными вкусами и большим количеством приправ.</p>
+    <p>Мы представляем вам три наших любимых рецепта!</p>
+    <div class="tab_kit card mb-3" style="max-width: 1200px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img id="img" src="img/image_11.jpg" class="img-fluid rounded-start" alt="Жа Дзяо Мянь">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Жа Дзяо Мянь</h5>
+            <p class="card-text">
+              <b>Ингредиенты:</b><br>
+              лапша — 300 г;<br>
+              свиной фарш — 200 г;<br>
+              паста из ферментированных бобов — 2 ст. л.;<br>
+              огурец — 1 шт.;<br>
+              зеленый лук — 2 пера;<br>
+              соевый соус — по вкусу.<br>
+            </p>
+            <p class="card-text">
+              <b>Приготовление:</b><br>
+              Отварить лапшу согласно инструкции на упаковке. Обжарить свиной фарш с пастой из ферментированных бобов до готовности. Нарезать огурец и зеленый лук. Собрать блюдо: положить лапшу, сверху – фарш, огурцы и лук.<br>
+              <b>Приятного аппетита!</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab_kit card mb-3" style="max-width: 1200px;">
+      <div class="row g-0">
+          <div class="col-md-4">
+              <img id="img" src="img/image_12.jpg" class="img-fluid rounded-start" alt="Гун Бао Цзы Рен">
+          </div>
+          <div class="col-md-8">
+              <div class="card-body">
+                  <h5 class="card-title">Гун Бао Цзы Рен</h5>
+                  <p class="card-text">
+                      <b>Ингредиенты:</b><br>
+                      куриное филе — 300 г;<br>
+                      арахис — 100 г;<br>
+                      сладкий перец — 1 шт.;<br>
+                      имбирь — 1 ч. л. натертого;<br>
+                      чеснок — 2 зубчика;<br>
+                      соевый соус — 3 ст. л.;<br>
+                      кунжутное масло — 1 ст. л.<br>
+                  </p>
+                  <p class="card-text">
+                      <b>Приготовление:</b><br>
+                      Куриное филе нарезать кубиками, обжарить на сковороде. Затем добавить имбирь, чеснок и нарезанный перец, обжарить еще несколько минут. Добавить арахис и соевый соус. Обжаривать 2-3 минуты и подать с рисом.<br>
+                      <b>Приятного аппетита!</b>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="tab_kit card mb-3" style="max-width: 1200px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img id="img" src="img/image_13.jpg" class="img-fluid rounded-start" alt="Бао Цзы">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Бао Цзы</h5>
+                <p class="card-text">
+                    <b>Ингредиенты:</b><br>
+                    мука — 500 г;<br>
+                    вода — 250 мл;<br>
+                    дрожжи — 1 ч. л.;<br>
+                    свиной фарш — 400 г;<br>
+                    капуста — 100 г;<br>
+                    имбирь — 1 ч. л.;<br>
+                    соевый соус — по вкусу.<br>
+                </p>
+                <p class="card-text">
+                    <b>Приготовление:</b><br>
+                    Замесить тесто из муки, воды и дрожжей, оставить подниматься. Фарш смешать с капустой и имбирем, добавить соевый соус. Раскатать тесто, разделить на порции и завернуть начинку. Приготовить на пару 15-20 минут.<br>
+                    <b>Приятного аппетита!</b>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    <br>
+  </main>
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="row">
+      <div class="col">Блог с домашними рецептами!</div>
+    </div>
+  </footer>
   <script>
     const toggleButton = document.getElementById('toggle-nav');
     const nav = document.getElementById('nav');
@@ -103,15 +135,6 @@
             nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
         }
     };
-    toggleButton.addEventListener('click', () => {
-        if (nav.classList.contains('vertical')) {
-            nav.classList.remove('vertical', 'active'); // Убираем вертикальное меню
-            localStorage.setItem('navState', 'horizontal'); // Сохраняем горизонтальное состояние
-        } else {
-            nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
-            localStorage.setItem('navState', 'vertical'); // Сохраняем вертикальное состояние
-        }
-    });
-</script>
+  </script>
 </body>
 </html>

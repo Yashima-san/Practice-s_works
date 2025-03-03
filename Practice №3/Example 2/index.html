@@ -16,12 +16,11 @@
             <div class="col-3">
                 <img id="logo" src="img/logo_1.png" alt="Логотип">
             </div>
-            <div id="name">
+            <div class="col-9">
                 <h1 class="name"><b>Вкусный блог!</b></h1>
             </div>
         </div>
     </header>
-    
     <!-- Навигационное меню -->
     <div id="menu">
         <nav class="navbar">
@@ -34,42 +33,34 @@
     </div>
     <!-- Основной контент -->
     <main class="container">
-            <h2>Новости:</h2>
-        <div class="row">
-            <div class="col">
+            <br><h4>Новости:</h4><br>
                 <form method="get" action="#">
-                    <table id="tab_kit" class="table table-bordered">
-                    <div class="tab">
-                    <tr>
-                    <td rowspan="2">
-                        <img id="image_0" src="img/image_0.jpg" alt="Итальянская кухня">
-                    </td></div>
-                    <div class="col">
-                    <div class="tab">
-                    <td>
-                        <b>Итальянская кухня: классические рецепты!</b> <b id="new">NEW</b>
-                        <p>Познакомьтесь с настоящими итальянскими рецептами пасты и ризотто, которые порадуют вас и ваших близких.</p>
-                        <a href="kitchen_italia.html">Узнать подробнее</a></td></div></div>
-                    </tr>
+                    <div class="tab_kit row g-0 position-relative">
+                        <div class="col-md-6 mb-md-0 p-md-4">
+                            <img id="image_0" src="img/image_0.jpg" class="w-100" alt="Итальянская кухня">
+                        </div>
+                        <div class="col-md-6 p-4 ps-md-0">
+                            <h5 class="mt-0">Итальянская кухня: классические рецепты! <b id="new">NEW</b></h5>
+                            <p>Познакомьтесь с настоящими итальянскими рецептами пасты и ризотто, которые порадуют вас и ваших близких.</p>
+                            <a href="kitchen_italia.html" class="stretched-link">Узнать подробнее</a>
+                        </div>
                     </div>
-                </table>
-                </form>
+                </form><br>
             <p> Мы рады приветствовать вас на нашем сайте! Здесь вы сможете найти разные рецепты приготовления вкусной и здоровой еды. Наша цель - сделать кулинарию доступной и приятной для всех.</p>
             <h4>Виды кулинарии нашего блога:</h4>
-            <ul id="">
-                <li><a href="kitchen_russia.html">Русская кухня</a></li>
-                <li><a href="kitchen_turkey.html">Турецкая кухня</a></li>
-                <li><a href="kitchen_japan.html">Японская кухня</a></li>
-                <li><a href="kitchen_china.html">Китайская кухня</a></li>
-                <li><a href="kitchen_italia.html">Итальянская кухня <b id="new">NEW</b></a></li>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="kitchen_russia.html">Русская кухня</a></li>
+                <li class="list-group-item"><a href="kitchen_turkey.html">Турецкая кухня</a></li>
+                <li class="list-group-item"><a href="kitchen_japan.html">Японская кухня</a></li>
+                <li class="list-group-item"><a href="kitchen_china.html">Китайская кухня</a></li>
+                <li class="list-group-item"><a href="kitchen_italia.html">Итальянская кухня <b id="new">NEW</b></a></li>
             </ul>
             <p>Многие рецепты публикуются пользователями! И если ты тоже хочешь поделиться классным рецептом, то присоединяйся к нашему дружному сообществу!</p>
-        </div>
-    </main>
+        <br></main>
     <!-- Подвал -->
     <footer class="footer">
         <div class="row">
-            <div class="col"><b>Блог с домашними рецептами!</b></div>
+            <div class="col">Блог с домашними рецептами!</div>
         </div>
     </footer>
     <script>

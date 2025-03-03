@@ -1,38 +1,44 @@
 /* Общие стили */
 .body-top {
-    width: 80%;
+    width: 100%;
     border: none;
     margin: auto;
     font-family: Segoe UI;
     font-style: normal;
     font-size: normal;
-    font-weight: bold;
+    font-weight: none;
     text-align: left;
-    padding: 5px;
+    clear: both;
+    padding: 0px;
 }
-
 /* Страница занимает 100% экрана по высоте (не обязательно с Bootstrap, но может быть полезно) */
 html {
     height: 100%;
 }
-
 body {
     min-height: 100%;
     position: relative;
     padding-bottom: 70px; /* Чтобы контент не перекрывал футер */
-
 }
-
+.name{
+    margin-top: 40px;
+    margin-right: 585px;
+}
 /* Заголовок */
 .header {
+    color: brown;
     background-color: #ffc27c;
-    box-shadow: 10px 0 10px -10px #b26813 inset, -10px 0 10px -10px #b26813 inset;
-    text-align: left; /* Выравнивание текста в заголовке */
-    clear: left;
+    font-size: 18px;
     padding: 1em;
-    position: relative; /* Для использования псевдоэлементов */
     width: 80%;
     margin: auto;
+    text-align: center;
+}
+
+.header img {
+    width: 120px;
+    height: 120px;
+    margin-right: 120px;
 }
 
 /* Подвал документа */
@@ -40,89 +46,113 @@ body {
     border: 3px solid #be6f15;
     color: brown;
     font-size: 20px;
+    font-weight: bold;
     background-color: #ffc27c;
     text-align: center;
     clear: left;
     width: 80%;
     margin: auto;
-}
-
-/* Логотип */
-.header img { /* Используем класс header, чтобы логотип находился в заголовке */
-    width: 100px;
-    height: 100px;
-    float: left;
+    height: 50px;
 }
 
 /* Навигационное меню */
 #menu {
     display: flex;
-    flex-direction: row; /* Вертикальное меню */
+    flex-direction: column; /* Вертикальное меню */
     justify-content: center;
     text-align: center;
     font-size: 16px;
-    padding: 10px;
     background-color: #ffe4be;
     border: 3px solid #be6f15;
-    width: 80%;
-    margin: auto;
+    width: 12%;
+    height: auto; /* Автоматическая высота для возможности добавления элементов */
+    padding: 8px;
+    position: fixed; /* Фиксированное позиционирование меню */
+    top: 0;
+    right: 0;
+    overflow-y: auto; /* Добавляем скролл при необходимости */
+    max-height: 100vh; /* Ограничиваем максимальную высоту меню */
 }
 /* Стили для ссылок в меню */
 #menu a {
     box-shadow: 50px 0 50px -50px #b26813 inset, -50px 0 50px -50px #b26813 inset;
-    margin: 5px 0px; /* Увеличиваем промежутки между кнопками */
-    width: 30%;
+    margin: 5px 0; /* Увеличиваем промежутки между кнопками */
     text-decoration: none;
-    padding: 10px; /* Внутренние отступы */
+    padding: 10px 15px; /* Внутренние отступы */
     color: #ffffff;
     background-color: #fbc077; /* Цвет кнопок */
     border: 3px solid #be6f15;
+    width: 80%;
+    transition: background-color 0.3s; /* Плавный переход цвета */
     margin-left: auto; /* Автоматический отступ слева */
     margin-right: auto; /* Автоматический отступ справа */
-}
-/* Ховер-эффект для ссылок меню */
-.navbar a:hover {
-    background-color: #ff8a36;
-}
-
-/* "Плавающее" название */
-.name { /* Используется класс из Bootstrap для колонок */
-    display: flex;
-}
-
-/* Заголовок в плавающем окне по центру */
-.name h1 { /* Используем класс header */
-    margin: auto;
 }
 
 /* Размер логотипа для средних и больших экранов */
 @media screen and (max-width: 653px) {
+    footer{
+        height: 15%;
+    }
+    .name{
+        margin-top: 40px;
+        margin-right: 0px;
+    }
+    header{
+        width: 90%; /* Make header wider on smaller screens */
+    }
     .header img {
-        max-width: 100px;
-        max-height: 100px;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px; /* Add spacing below logo */
     }
-    h1 {
+    #menu {
+        position: static; /* Keep menu fixed on smaller screens */
+        flex-direction: row; /* Вертикальное меню */
+        margin-left: 45px;
+        width: 80%; /* Adjust menu width */
+        height: 5%;
+    }
+
+    #menu a {
         font-size: 14px;
+        width: 47%; /* Make links full width */
+    }
+     /* Remove unnecessary styling for the footer col in media query*/
+    .footer{
+        font-size: 22px;
     }
 }
-
 /* Элементы списков */
-ul, li {
-    list-style-type: none;
-    padding: 0;
+ul {
+    padding-left: 20px; /* Отступ слева для списка для более четкого отображения */
+    list-style-type: decimal; /* Устанавливаем числовой стиль для списка */
 }
-
+li {    
+    list-style-type: none;
+    margin-bottom: 5px; /* Отступ между элементами списка */
+}
 /* Ссылки */
 a {
     color: #d93a09; /* Цвет ссылок */
     text-decoration: none;
 }
+h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+h2 {
+    font-weight: bold;
+}
+.card-title, .card-text{
+    color: #be6f15;
+}
 
 /* Основной контент */
 .container {
     color: #be6f15;
+    padding-left: 2em;
+    padding-right: 2em;
     background-color: rgb(255, 243, 214); /* Фон как во втором CSS */
-
 }
 
 /* Класс для выделения "NEW" */
@@ -131,101 +161,35 @@ a {
 }
 
 /* Таблица новостей */
-#tab_kit {
+.tab_kit {
     border: 3px solid #be6f15;
-    padding: 5px;
     background-color: #ffe4be;
-    margin: auto;
-    width: 100%; /* Занимает всю ширину родителя */
-}
-
-.news-item td:first-child {
-    width: 25%; /* Устанавливаем ширину для первой ячейки */
-    overflow: hidden; /* Скрываем переполнение */
-    height: auto; /* Высота будет авто для динамического содержимого */
-    min-height: 10px; /* Минимальная высота для ячейки с изображением */
-}
-
-.news-item td:last-child {
-    text-align: left;
-    width: 90%; /* Увеличиваем ширину для второй ячейки */
-    padding-left: 10px; /* Отступ слева для текста */
-}
-
-.news-item img {
-    width: 350px; /* Ширина изображения будет равна ширине ячейки */
-    height: auto; /* Высота будет пропорционально изменяться */
-    max-height: 100px; /* Ограничиваем максимальную высоту */
-    object-fit: cover; /* Обеспечивает обрезку изображения с сохранением пропорций */
-    display: block; /* Убираем отступы под изображением */
 }
 
 /* Адаптация изображений */
 #image_0 { /* Для изображений в новостях */
-    width: 350px;
+    width: 100px;
     height: auto;
-    max-height: 100px;
+    max-height: 150px;
     object-fit: cover;
     display: block;
 }
-/* Для изображений, которые не в новостях (например, логотип) */
-img {
-    width: 200px;
-    height: 150px;
-    float: none; /* Убираем float */
+#image{
+    width: 100px;
+    height: auto;
+    max-height: 100px;
 }
-
-/* Остальные стили для ссылок в меню */
-.navbar a {
-    color: #ffffff; /* Цвет текста */
-    background-color: #fbc077; /* Цвет фона */
-    text-decoration: none;
+#img{
+    margin-top: 50px;
 }
-
-/* Скрываем навигацию, если это необходимо */
-.navbar.hidden {
-    display: none;
-}
-
 /* Стили для имени */
 .name {
     display: inline-block;
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
-
 .name:hover {
     transform: scale(1.10);
-}
-
-.user-actions a {
-    margin-right: 15px;
-}
-
-.edit-profile, .create-recipe {
-    margin-top: 20px;
-    padding: 10px;
-    border: 3px solid #be6f15;
-    background-color: #fff3e0;
-}
-
-.recipe-form input, .recipe-form textarea {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.create-recipe {
-    width: 600px;
-}
-
-.recipe-form {
-    margin-top: 10px;
-}
-
-.recipe-list, .edit-profile {
-    margin-top: 30px;
-    border-top: 3px solid #ffe4be;
-    padding-top: 20px;
 }
 /*Центрирование контента*/
 .container {

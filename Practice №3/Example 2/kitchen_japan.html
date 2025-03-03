@@ -2,132 +2,149 @@
 <html>
 <head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="kit/css/bootstrap.min.css">
-    <!-- Собственные стили -->
-    <link rel="stylesheet" href="/Practice №3/Example 2/СSS/style.css">
-    <link rel="icon" href="img/logo_1.ico" type="image/x-icon"> 
-  <title>Японская кухня | Вкусный блог!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="kit/css/bootstrap.min.css">
+  <!-- Собственные стили -->
+  <link rel="stylesheet" href="/Practice №3/Example 2/СSS/style.css">
+  <link rel="icon" href="img/logo_1.ico" type="image/x-icon"> 
+  <title>Китайская кухня | Вкусный блог!</title>
 </head>
-<body>
-  <div id="content">
-    <header>
-      <div id="logo">
-        <img src="img/logo_1.png" alt="Логотип">
+<body class="body-top">
+  <!-- Заголовок -->
+  <header class="header">
+    <div class="row">
+      <div class="col-3">
+        <img id="logo" src="img/logo_1.png" alt="Логотип">
       </div>
-      <div id="name">
+      <div class="col-9">
         <h1 class="name"><b>Вкусный блог!</b></h1>
       </div>
-    </header>
-    <nav id="nav">
-      <a href="index.html">Главная страница</a>
-      <a href="recipes.html">Рецепты</a>
-      <a href="kitchen.html">Виды кулинарии</a>
-      <a href="contacts.html">О нас</a>
-      <a href="user.html">Личный кабинет</a>
-  </nav>
-    <div id="main">
-      <h2>Японская кухня</h2>
+    </div>
+  </header>
+  <!-- Навигационное меню -->
+  <div id="menu">
+    <nav class="navbar">
+      <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная страница</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="recipes.html">Рецепты</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="kitchen.html">Виды кулинарии</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">О нас</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="user.html">Личный кабинет</a>
+    </nav>
+  </div>
+    <!-- Основной контент -->
+    <main class="container">
+      <br><h4>Японская кухня</h4>
       <p>Японская кухня известна своими свежими ингредиентами и простыми, но вкусными блюдами.</p>
       <p>Мы предоставляем вам три наших любимых рецепта!</p>
-      <table id="kitchen">
-        <tr>
-          <td><b>Изображение:</b></td>
-          <td><b>Название блюда:</b></td>
-          <td><b>Рецепт:</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_4.jpg" alt="Суши Филадельфия"></td>
-          <td>Суши филадельфия</td>
-          <td><b>Ингредиенты:</b>
-              вода — 240 г для риса;
-              форель — 100 г;
-              рыбный крем — 2 ст. л.;
-              крабовые палочки — 2 шт.;
-              креветки — 10 шт.;
-              вода — 80 мл для заливки;
-              уксус рисовый — 25 г;
-              соль — 1 ч. л.;
-              нори — 10 шт. полосок;
-              имбирь — по вкусу;
-              соевый соус — по вкусу;
-              васаби — по вкусу;
-              соус терияки — по желанию.
-              <p><b>Приготовление:</b>
+      <div class="tab_kit card mb-3" style="max-width: 1200px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img id="img" src="img/image_4.jpg" class="img-fluid rounded-start"  alt="Суши Филадельфия"></td>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">Суши филадельфия</h5>
+            <p class="card-text"><b>Ингредиенты:</b><br>
+              вода — 240 г для риса;<br>
+              форель — 100 г;<br>
+              рыбный крем — 2 ст. л.;<br>
+              крабовые палочки — 2 шт.;<br>
+              креветки — 10 шт.;<br>
+              вода — 80 мл для заливки;<br>
+              уксус рисовый — 25 г;<br>
+              соль — 1 ч. л.;<br>
+              нори — 10 шт. полосок;<br>
+              имбирь — по вкусу;<br>
+              соевый соус — по вкусу;<br>
+              васаби — по вкусу;<br>
+              соус терияки — по желанию.<br>
+              <p class="card-text"><b>Приготовление:</b><br>
               Подготовить все ингредиенты для суши. В качестве рыбной составляющей взять слабосолёную форель. Также понадобятся крабовые палочки, отварные креветки и рыбный крем. Листы нори нужно предварительно нарезать на прямоугольные полоски 3,5х13 см.
               Приготовить рис для суши. Рис хорошо промыть и выложить в кастрюлю, залить холодной водой и поставить на огонь. Варить рис после закипания воды на медленном огне в течение 10 минут. Далее выключить огонь.
               Между крышкой и кастрюлей выложить полотенце и оставить рис в таком виде на 15–20 минут. В это время заняться начинкой.
               Подготовить рыбу для суши. Нарезать рыбу на небольшие прямоугольники, примерно, по 4х1,5 см каждый. Количество прямоугольников из форели должно быть равно количеству суши, которые вы планируете приготовить. Обрезки, оставшиеся от рыбы, мелко нарезать.
               Убрать прямоугольники рыбы в сторону, а нарезанную рыбу смешать с одной столовой ложкой рыбного крема. Вместо рыбного крема можно использовать другой соус, например, майонез соединить с творожным сыром в равных пропорциях.
-              Уложить рис на нори, сверху выложить начинку из рыбы и свернуть суши.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_3.jpg" alt="Рамен с курицей"></td>
-          <td>Рамен с курицей</td>
-          <td><b>Ингредиенты:</b>
-            100 г лапши рамен;
-            1 куриное филе;
-            0,5 моркови;
-            2 стебля сельдерея;
-            0,5 болгарского перца;
-            2 пера зелёного лука;
-            2 зубчика чеснока;
-            800 мл бульона;
-            2 ст. л. соевого соуса.
-            <p><b>Приготовление:</b>
+              Уложить рис на нори, сверху выложить начинку из рыбы и свернуть суши.<br>
+              <b>Приятного аппетита!</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab_kit card mb-3" style="max-width: 1200px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img id="img" src="img/image_3.jpg" class="img-fluid rounded-start"  alt="Рамен с курицей"></td>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">Рамен с курицей</h5>
+            <p class="card-text"><b>Ингредиенты:</b><br>
+            100 г лапши рамен;<br>
+            1 куриное филе;<br>
+            0,5 моркови;<br>
+            2 стебля сельдерея;<br>
+            0,5 болгарского перца;<br>
+            2 пера зелёного лука;<br>
+            2 зубчика чеснока;<br>
+            800 мл бульона;<br>
+            2 ст. л. соевого соуса.<br>
+            <p class="card-text"><b>Приготовление:</b><br>
               Мелко нарезать все овощи. Добавить соевый соус, специи и бульон, проварить 1–2 минуты после кипения.
               Добавить мелко нарезанную курицу и лапшу, варить ещё 10 минут на среднем огне.
-              В конце добавить зелёный лук.</p>
-            <b>Приятного аппетита!</b></td>
-        </tr>
-        <tr>
-          <td rowspan="1"><img src="img/image_2.jpg" alt="Темпура из креветок"></td>
-          <td>Темпура из креветок</td>
-          <td><b>Ингредиенты:</b>
-            мука рисовая — 1 ст. л.;
-            мука кукурузная — 2 ст. л.;
-            мука пшеничная — 1 ст. л.;
-            креветки очищенные — 400–450 г;
-            яйцо — 1 шт.;
-            ледяная вода — 1 стакан;
-            лимон — ½ шт.;
-            перец чили сухой — 1 щепотка;
-            масло кунжутное или любое растительное для жарки.
-            <p><b>Приготовление:</b>
+              В конце добавить зелёный лук.<br>
+            <b>Приятного аппетита!</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab_kit card mb-3" style="max-width: 1200px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+            <img id="img" src="img/image_2.jpg" class="img-fluid rounded-start" alt="Темпура из креветок"></td>
+          </div>
+          <div class="col-md-8">
+              <div class="card-body">
+                  <h5 class="card-title">Темпура из креветок</h5>
+            <p class="card-text"><b>Ингредиенты:</b><br>
+            мука рисовая — 1 ст. л.;<br>
+            мука кукурузная — 2 ст. л.;<br>
+            мука пшеничная — 1 ст. л.;<br>
+            креветки очищенные — 400–450 г;<br>
+            яйцо — 1 шт.;<br>
+            ледяная вода — 1 стакан;<br>
+            лимон — ½ шт.;<br>
+            перец чили сухой — 1 щепотка;<br>
+            масло кунжутное или любое растительное для жарки.<br>
+            <p class="card-text"><b>Приготовление:</b><br>
               Креветки очистить от панциря, оставив хвостик, сделать несколько глубоких надрезов вдоль хребта и чуть-чуть придавить широкой стороной ножа.
               Так мякоть станет мягче и сочнее.
               В глубокой миске с помощью венчика смешать сырое яйцо и стакан ледяной воды. Всыпать три вида муки, добавить щепотку острого красного перца, быстро перемешать венчиком.
               Каждую креветку слегка присыпать рисовой или пшеничной мукой, один раз обмакнуть в кляр и жарить в кипящем масле 3–4 минуты до золотистой корочки.
-              Креветки выложить на бумажное полотенце, сбрызнуть соком лимона и подавать на стол вместе с соевым соусом.</p>
-              <b>Приятного аппетита!</b></td>
-        </tr>
-      </table>
+              Креветки выложить на бумажное полотенце, сбрызнуть соком лимона и подавать на стол вместе с соевым соусом.<br>
+              <b>Приятного аппетита!</b></p>
+      </div>
     </div>
-    <footer>
-      <b>Блог с домашними рецептами!</b>
-    </footer>
+</div>
+</div>
+  <br>
+</main>
+<!-- Подвал -->
+<footer class="footer">
+  <div class="row">
+    <div class="col">Блог с домашними рецептами!</div>
   </div>
-  <script>
-    const toggleButton = document.getElementById('toggle-nav');
-    const nav = document.getElementById('nav');
-    // Проверяем состояние меню при загрузке страницы
-    window.onload = () => {
-        if (localStorage.getItem('navState') === 'vertical') {
-            nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
-        } else {
-            nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
-        }
-    };
-    toggleButton.addEventListener('click', () => {
-        if (nav.classList.contains('vertical')) {
-            nav.classList.remove('vertical', 'active'); // Убираем вертикальное меню
-            localStorage.setItem('navState', 'horizontal'); // Сохраняем горизонтальное состояние
-        } else {
-            nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
-            localStorage.setItem('navState', 'vertical'); // Сохраняем вертикальное состояние
-        }
-    });
+</footer>
+<script>
+  const toggleButton = document.getElementById('toggle-nav');
+  const nav = document.getElementById('nav');
+  // Проверяем состояние меню при загрузке страницы
+  window.onload = () => {
+      if (localStorage.getItem('navState') === 'vertical') {
+          nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+      } else {
+          nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
+      }
+  };
 </script>
 </body>
 </html>

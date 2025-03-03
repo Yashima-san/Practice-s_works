@@ -9,84 +9,93 @@
     <link rel="icon" href="img/logo_1.ico" type="image/x-icon"> 
     <title>Личный кабинет | Вкусный блог!</title>
 </head>
-<body>
-    <div id="content">
-        <header>
-            <div id="logo">
-                <img src="img/logo_1.png" alt="Логотип">
+<body class="body-top">
+    <!-- Заголовок -->
+    <header class="header">
+        <div class="row">
+            <div class="col-3">
+                <img id="logo" src="img/logo_1.png" alt="Логотип">
             </div>
-            <div id="name">
+            <div class="col-9">
                 <h1 class="name"><b>Вкусный блог!</b></h1>
             </div>
-        </header>
-        <nav id="nav">
-            <a href="index.html">Главная страница</a>
-            <a href="recipes.html">Рецепты</a>
-            <a href="kitchen.html">Виды кулинарии</a>
-            <a href="contacts.html">О нас</a>
-            <a href="user.html">Личный кабинет</a>
+        </div>
+    </header>
+    <!-- Навигационное меню -->
+    <div id="menu">
+        <nav class="navbar">
+            <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная страница</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="recipes.html">Рецепты</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="kitchen.html">Виды кулинарии</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">О нас</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="user.html">Личный кабинет</a>
         </nav>
-        <div id="main">
-            <h2>Личный кабинет</h2>
+    </div>
+    <!-- Основной контент -->
+    <main class="container">
+            <br><h4>Личный кабинет</h4>
             <p>Добро пожаловать в ваш личный кабинет! 
                 Здесь вы можете управлять своими рецептами 
                 и настройками.
             </p>
-            <div class="user-info">
-                <h2>Ваш профиль:</h2>
-                <p><b>Имя:</b> Администратор</p>
-                <p><b>Email:</b> alirkotiaaaa@gmail.com</p>
-                <button>Редактировать профиль</button>
-            </div><br>
-            <div class="create-recipe">
-                <h4>Создать запись</h4>
-                <form class="recipe-form">
-                    <label for="recipe-image">Изображение:</label>
-                    <input type="file" id="recipe-image" accept="image/*">
-                    
-                    <label for="recipe-title">Название рецепта:</label>
-                    <input type="text" id="recipe-title" placeholder="Введите название">
-
-                    <label for="recipe">Рецепт:</label><br>
-                    <label for="recipe-ingredients">Ингредиенты:</label>
-                    <textarea id="recipe-ingredients" rows="4" placeholder="Введите ингредиенты"></textarea>
-                    
-                    <label for="recipe-instructions">Приготовление:</label>
-                    <textarea id="recipe-instructions" rows="6" placeholder="Введите шаги приготовления"></textarea>
-                    
-                    <button type="submit">Добавить рецепт</button>
-                </form>
-            </div>
-            <div class="recipe-list">
-                <h4>Добавленные записи:</h4>
-                <p>Пока у вас нет записей.</p>
-                <!-- Здесь будут отображаться добавленные записи -->
+            <div class="container mt-5">
+                <div class="user-info">
+                    <h4>Ваш профиль:</h4>
+                    <p><b>Имя:</b> Администратор</p>
+                    <p><b>Email:</b> alirkotiaaaa@gmail.com</p>
+                    <button class="btn btn-primary">Редактировать профиль</button>
+                </div><br>
+                <div class="create-recipe">
+                    <h4>Создать запись</h4>
+                    <form class="recipe-form">
+                        <div class="mb-3">
+                            <label for="recipe-image" class="form-label">Изображение:</label>
+                            <input type="file" class="form-control" id="recipe-image" accept="image/*">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="recipe-title" class="form-label">Название рецепта:</label>
+                            <input type="text" class="form-control" id="recipe-title" placeholder="Введите название">
+                        </div>
+            
+                        <div class="mb-3">
+                            <label for="recipe-ingredients" class="form-label">Ингредиенты:</label>
+                            <textarea id="recipe-ingredients" class="form-control" rows="4" placeholder="Введите ингредиенты"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="recipe-instructions" class="form-label">Приготовление:</label>
+                            <textarea id="recipe-instructions" class="form-control" rows="6" placeholder="Введите шаги приготовления"></textarea>
+                        </div>
+            
+                        <button type="submit" class="btn btn-primary">Добавить рецепт</button>
+                    </form>
+                </div>
+                <div class="recipe-list mt-5">
+                    <h4>Добавленные записи:</h4>
+                    <p>Пока у вас нет записей.</p>
+                    <!-- Здесь будут отображаться добавленные записи -->
+                </div>
             </div>
         </div>
-        <footer>
-            <b>Блог с домашними рецептами!</b>
-        </footer>
-    </div>
+    <br></main>
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col">Блог с домашними рецептами!</div>
+      </div>
+    </footer>
     <script>
-        const toggleButton = document.getElementById('toggle-nav');
-        const nav = document.getElementById('nav');
-        // Проверяем состояние меню при загрузке страницы
-        window.onload = () => {
-            if (localStorage.getItem('navState') === 'vertical') {
-                nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
-            } else {
-                nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
-            }
-        };
-        toggleButton.addEventListener('click', () => {
-            if (nav.classList.contains('vertical')) {
-                nav.classList.remove('vertical', 'active'); // Убираем вертикальное меню
-                localStorage.setItem('navState', 'horizontal'); // Сохраняем горизонтальное состояние
-            } else {
-                nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
-                localStorage.setItem('navState', 'vertical'); // Сохраняем вертикальное состояние
-            }
-        });
+      const toggleButton = document.getElementById('toggle-nav');
+      const nav = document.getElementById('nav');
+      // Проверяем состояние меню при загрузке страницы
+      window.onload = () => {
+          if (localStorage.getItem('navState') === 'vertical') {
+              nav.classList.add('vertical', 'active'); // Устанавливаем вертикальное меню
+          } else {
+              nav.classList.remove('vertical', 'active'); // Горизонтальное меню по умолчанию
+          }
+      };
     </script>
-</body>
-</html>
+  </body>
+  </html>
