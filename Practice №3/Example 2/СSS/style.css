@@ -54,7 +54,6 @@ body {
     margin: auto;
     height: 50px;
 }
-
 /* Навигационное меню */
 #menu {
     display: flex;
@@ -87,7 +86,17 @@ body {
     margin-left: auto; /* Автоматический отступ слева */
     margin-right: auto; /* Автоматический отступ справа */
 }
-
+.btn{
+    box-shadow: 50px 0 50px -50px #b26813 inset, -50px 0 50px -50px #b26813 inset;
+    margin: 5px 0; /* Увеличиваем промежутки между кнопками */
+    text-decoration: none;
+    padding: 10px 15px; /* Внутренние отступы */
+    color: #ffffff;
+    background-color: #fbc077; /* Цвет кнопок */
+    border: 3px solid #be6f15;
+    margin-left: auto; /* Автоматический отступ слева */
+    margin-right: auto; /* Автоматический отступ справа */
+}
 /* Размер логотипа для средних и больших экранов */
 @media screen and (max-width: 653px) {
     footer{
@@ -112,7 +121,6 @@ body {
         width: 80%; /* Adjust menu width */
         height: 5%;
     }
-
     #menu a {
         font-size: 14px;
         width: 47%; /* Make links full width */
@@ -143,29 +151,39 @@ h4 {
 h2 {
     font-weight: bold;
 }
-.card-title, .card-text{
-    color: #be6f15;
-}
-
 /* Основной контент */
 .container {
+    width: 80%;
+    margin: auto;
     color: #be6f15;
     padding-left: 2em;
     padding-right: 2em;
     background-color: rgb(255, 243, 214); /* Фон как во втором CSS */
 }
-
 /* Класс для выделения "NEW" */
 #new {
     color: #d93a09; /* Цвет как у ссылок */
 }
-
 /* Таблица новостей */
-.tab_kit {
+.tab_kit, .container_pf{
     border: 3px solid #be6f15;
     background-color: #ffe4be;
 }
-
+.tab {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 100%;
+    border: 3px solid #be6f15;
+    background-color: #ffe4be;
+}
+.form{
+    margin: 20px;
+}
+#forms{
+    text-align: center;
+}
 /* Адаптация изображений */
 #image_0 { /* Для изображений в новостях */
     width: 100px;
@@ -179,9 +197,6 @@ h2 {
     height: auto;
     max-height: 100px;
 }
-#img{
-    margin-top: 50px;
-}
 /* Стили для имени */
 .name {
     display: inline-block;
@@ -190,9 +205,4 @@ h2 {
 }
 .name:hover {
     transform: scale(1.10);
-}
-/*Центрирование контента*/
-.container {
-    width: 80%;
-    margin: auto;
 }
