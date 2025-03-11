@@ -1,0 +1,127 @@
+/* Оформление содержимого всей страницы по умолчанию 
+скопировано с предыдущей версии сайта */
+.body-top {
+    width: 80%;
+    border: none;
+    margin: auto;
+    font-family: Verdana;
+    font-style: normal;
+    font-size: normal;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Эффект при наведении на кнопку */
+.btn:hover {
+    background-color: #007196; /* Меняем фон при наведении */
+}
+.tour{
+    border: solid #007196;
+    margin: auto;
+    height: 100%;
+    /* установили возможность использования технологии fех */
+    display: flex;
+    /* указали направление расположения внутренних элементов -
+    по строке (row), и одновременно задали возможность для них перено-
+    ситься на другую строку при уменьшении экрана */
+    flex-flow: row wrap;
+}   
+.tour img {
+    width: 250px;
+    height: 170px;
+    padding: 5px;
+}
+.tour p .tour img {
+    margin: 0 10px;
+}
+/* Для того, чтобы прижать кнопку к правому краю, если элемент,
+который нужно прижать к правому краю, не последний в контейнере */
+.btn {
+    margin-left: auto;
+    order:999;
+    background-color:#66CDAA;
+    box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px
+    #000 inset;
+    color:white;
+}
+/* Страница занимает 100% экрана по высоте */
+html {
+    height: 100%;
+}
+
+/* Тело документа имеет относительное позиционирование, но отступ
+для тела документа снизу больше или равен высоте футера */
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+/* Подвал документа имеет абсолютное позиционирование, высоту 50px */
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: #007196;
+}
+
+/* Оформление содержимого всего блока заголовка */
+header {
+    padding: 1em;
+    color: white;
+    background-color: #007196;
+    vertical-align: center;
+}
+
+/* Размер логотипа для средних и больших экранов */
+#logo {
+    max-width: 180px;
+    max-height: 140px;
+}
+
+/* "Плавающее" в зависимости от изменения экрана название */
+.col-9 {
+    display: flex;
+}
+
+/* Заголовок в плавающем окне по центру */
+h1 {
+    margin: auto;
+}
+
+/* МЕДИА-ЗАПРОС позволяет сделать размер логотипа и названия
+меньшими при изменении размера окна до размера мобильного 
+устройства */
+@media screen and (max-width: 653px) {
+    #logo {
+        max-width: 100px;
+        max-height: 70px;
+    }
+    h1 {
+        font-size: 14px;
+    }
+}
+
+#menu {
+    /* Фон всего меню */
+    background-color: #66CDAA;
+}
+
+#menu a {
+    /* Цвет и рамка каждого пункта меню */
+    color: white; /* Устанавливаем цвет текста в белый */
+    border: solid white; /* Устанавливаем белую рамку */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    padding: 10px; /* Добавляем отступы для удобства */
+    display: inline-block; /* Делаем ссылки блочными для удобного клика */
+    box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px
+    #000 inset;
+}
+
+/* Удаление стилей для ссылок в других местах, если необходимо */
+a {
+    color: inherit; /* Убираем нежелательные стили */
+}

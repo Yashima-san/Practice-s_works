@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="travel/css/bootstrap.min.css">
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Сайт туристическая компания</title>
+</head>
+<!-- Используем стиль body-top по умолчанию для всего документа -->
+<body class="body-top">
+    <!-- Создаем блок для области заголовка-->
+    <header class="container">
+        <div class="row">
+            <div class="col-3">
+                <img id="logo" src="img/logo.jpeg" alt="Логотип">
+            </div>
+            <div class="col-9">
+                <h1>Путешествуйте с нами!</h1>
+            </div>
+        </div>
+    </header>
+    <div id="menu">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Главная</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="turs.html">Наши туры</a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">O Hac</a>
+        </nav>
+    </div>
+    <!-- Modal -->
+    <!-- Укажите id этого модульного окна таким же, как был параметр
+    data-target в кнопке его вызова на предыдущем шаге -->
+    <div class = "modal fade" id = "myModal" tabindex = "-1"
+        role = "dialog" aria-labelledby = "exampleModalScrollableTitle"
+        aria-hidden = "true">
+        <div class = "modal-dialog modal-dialog-scrollable" role ="document">
+            <div class = "modal-content">
+                <div class = "modal-header">
+                    <h5 class = "modal-title"
+                    id = "exampleModalScrollableTitle">Modal title</h5>
+                    <button type = "button" class = "close"
+                    data-dismiss = "modal" aria-label = "Close">
+                    <span aria-hidden = "true">&times;</span>
+                    </button>
+                </div>
+                <!-- Начало описания модального окна bootstrap -->
+                <div class = "modal-body" style = "max-width: 600px">
+                    <!-- Начало формы -->
+                    <form method = "get" action = "#" id = "orderForm">
+                    <!-- Далее в блоках класса tour (для того, чтобы к ним были при-
+                    менены те же стили, что и на основной странице сайта) описываются
+                    поля формы для ввода данных. В том числе: поле для выбора страны
+                    (идентификатор, который будет использоваться для дальнейшей обра-
+                    ботки - inp1); поле для ввода даты (mun - date, идентификатор -
+                    inp2); поле для выбора количества участников тура (идентификатор
+                    inр3) и поле для ввода email пользователя, идентификатор inp4 -->
+                        <div class = "tour">
+                            <label class = "label" for = "name">
+                                Выберите тур:
+                            </label>
+                            <!-- id формы (orderForm) будет использоваться в скрипте обра-
+                            ботки формы, рассматриваемом ниже -->
+                            <select id = "inp1">
+                                <option value = "Крым" selected>
+                                    Крым
+                                </option>
+                                <option value = "Кавказ">
+                                    Кавказ
+                                </option>
+                                <option value = "Алтай">
+                                    Алтай
+                                </option>
+                            </select>
+                        </div>
+                        <div class = "tour">
+                            <label class = "label" for = "data">
+                                Выберите дату начала:
+                            </label>
+                            <input type = "date" id = "inp2">
+                        </div>
+                        <div class = "tour">
+                            <label class = "label" for = "number">
+                                Выберите количество участников:
+                            </label>
+                            <select id = "inp3">
+                                <option value = "1" >1</option>
+                                <option value = "2" selected>2</option>
+                                <option value = "3">3</option>
+                                <option value = "3">4</option>
+                            </select>
+                        </div>
+                        <div class = "tour">
+                            <label class = "label" for = "email">
+                                Baw E-mail:
+                            </label>
+                            <input type = "email" id = "inp4" 
+                            class = "input-xlarge" style= "width: 350px;" 
+                            required = "required">
+                        </div>
+                        <div class="modal-footer">
+                            <button type = "button" class = "btn btn-primary" 
+                            data-dismiss ="modal">Закрыть</button>
+                            <button type = "submit" class = "btn btn-primary" 
+                            id ="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class = "flex">
+        <div class = "row">
+            <div class = "col">
+            Наши туры
+            </div>
+        </div>
+        <div class = "container-fluid">
+            <div class = "row">
+                <div class = "col">
+                    <div class = "tour">
+                        <img src = "img/crimea.jpg" class = "tour_img">
+                        <p>Это прекрасная возможность отдохнуть всей семьей</p>
+                        <button type = "button" class = "btn btn-primary"
+                        data-toggle = "modal" data-target = "#myModal">
+                        Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col">
+                    <div class = "tour">
+                        <img src = "img/kavkaz.jpg" class = "tour_img">
+                        <p>Море, солнце и горы !</p>
+                        <button type = "button" class = "btn btn-primary"
+                        data-toggle = "modal" data-target = "#myModal">
+                        Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col">
+                    <div class = "tour">
+                        <img src = "img/altay.jpg" class = "tour_img">
+                        <p> Незабываемые впечатления !</p>
+                        <button type = "button" class = "btn btn-primary"
+                        data-toggle = "modal" data-target = "#myModal">
+                        Рассчитать стоимость
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="row">
+            <div class="col">Это сайт, предназначенный для обучения</div>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="travel/js/bootstrap.esm.min.js"></script>
+<script>
+    $('#orderForm').on('submit', function ()
+    {
+        let tour = $("#inp1").val();
+        let date = new Date($("#inp2").val());
+        let month = date.getMonth();
+        let kol = $("#inp3").val();
+        kol = Number(kol);
+        let email = $("#inp4").val();
+        let stoim = 0;
+        if (tour == 'Крым')
+        {
+            if((month == 5)||(month == 6)||(month == 7)||(month == 8))
+                {stoim = kol*500;}
+            else {stoim = kol*300;}
+        }
+        if (tour == 'Кавказ')
+        {
+            if((month == 12)||(month == 1)||(month == 2)||(month ==5)||(month == 6)||(month == 7)||(month == 8))
+                {stoim = kol*300;}
+            else {stoim = kol*250;}
+        }
+        if (tour == 'Алтай')
+        {
+            {stoim = kol*1000;}
+        }
+        alert ( `Примерная стоимость вашего тура на ${kol} человек
+        составит ${stoim} у.е. Мы свяжемся с ВАМИ !! `);
+    }
+    );
+</script>
+</body>
+</html>
