@@ -28,87 +28,43 @@
             <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">O Hac</a>
         </nav>
     </div>
-    <!-- Modal -->
-    <!-- Укажите id этого модульного окна таким же, как был параметр
-    data-target в кнопке его вызова на предыдущем шаге -->
-    <div class = "modal fade" id = "myModal" tabindex = "-1"
-        role = "dialog" aria-labelledby = "exampleModalScrollableTitle"
-        aria-hidden = "true">
-        <div class = "modal-dialog modal-dialog-scrollable" role ="document">
-            <div class = "modal-content">
-                <div class = "modal-header">
-                    <h5 class = "modal-title"
-                    id = "exampleModalScrollableTitle">Modal title</h5>
-                    <button type = "button" class = "close"
-                    data-dismiss = "modal" aria-label = "Close">
-                    <span aria-hidden = "true">&times;</span>
-                    </button>
-                </div>
-                <!-- Начало описания модального окна bootstrap -->
-                <div class = "modal-body" style = "max-width: 600px">
-                    <!-- Начало формы -->
-                    <form method = "get" action = "#" id = "orderForm">
-                    <!-- Далее в блоках класса tour (для того, чтобы к ним были при-
-                    менены те же стили, что и на основной странице сайта) описываются
-                    поля формы для ввода данных. В том числе: поле для выбора страны
-                    (идентификатор, который будет использоваться для дальнейшей обра-
-                    ботки - inp1); поле для ввода даты (mun - date, идентификатор -
-                    inp2); поле для выбора количества участников тура (идентификатор
-                    inр3) и поле для ввода email пользователя, идентификатор inp4 -->
-                        <div class = "tour">
-                            <label class = "label" for = "name">
-                                Выберите тур:
-                            </label>
-                            <!-- id формы (orderForm) будет использоваться в скрипте обра-
-                            ботки формы, рассматриваемом ниже -->
-                            <select id = "inp1">
-                                <option value = "Крым" selected>
-                                    Крым
-                                </option>
-                                <option value = "Кавказ">
-                                    Кавказ
-                                </option>
-                                <option value = "Алтай">
-                                    Алтай
-                                </option>
-                            </select>
-                        </div>
-                        <div class = "tour">
-                            <label class = "label" for = "data">
-                                Выберите дату начала:
-                            </label>
-                            <input type = "date" id = "inp2">
-                        </div>
-                        <div class = "tour">
-                            <label class = "label" for = "number">
-                                Выберите количество участников:
-                            </label>
-                            <select id = "inp3">
-                                <option value = "1" >1</option>
-                                <option value = "2" selected>2</option>
-                                <option value = "3">3</option>
-                                <option value = "3">4</option>
-                            </select>
-                        </div>
-                        <div class = "tour">
-                            <label class = "label" for = "email">
-                                Baw E-mail:
-                            </label>
-                            <input type = "email" id = "inp4" 
-                            class = "input-xlarge" style= "width: 350px;" 
-                            required = "required">
-                        </div>
-                        <div class="modal-footer">
-                            <button type = "button" class = "btn btn-primary" 
-                            data-dismiss ="modal">Закрыть</button>
-                            <button type = "submit" class = "btn btn-primary" 
-                            id ="submit">Отправить</button>
-                        </div>
-                    </form>
-                </div>
+   <!-- Модальное окно -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Рассчет стоимости тура</h5>
+                <span class="close" onclick="closeModal('myModal')">&times;</span>
+            </div>
+            <div class="modal-body" style="max-width: 600px">
+                <form method="get" action="#" id="orderForm">
+                    <label for="inp1">Выберите тур:</label>
+                    <select id="inp1">
+                        <option value="Крым" selected>Крым</option>
+                        <option value="Кавказ">Кавказ</option>
+                        <option value="Алтай">Алтай</option>
+                    </select>
+                    <label for="inp2">Выберите дату начала:</label>
+                    <input type="date" id="inp2">
+                    <label for="inp3">Выберите количество участников:</label>
+                    <select id="inp3">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <label for="inp4">Ваш E-mail:</label>
+                    <input type="email" id="inp4" class="input-xlarge" style="width: 350px;" required>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary" id="submit">Отправить</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+
     <main class = "flex">
         <div class = "row">
             <div class = "col">
@@ -121,8 +77,8 @@
                     <div class = "tour">
                         <img src = "img/crimea.jpg" class = "tour_img">
                         <p>Это прекрасная возможность отдохнуть всей семьей</p>
-                        <button type = "button" class = "btn btn-primary"
-                        data-toggle = "modal" data-target = "#myModal">
+                        <button class = "btn btn-primary"
+                        onclick="openModal('myModal')">
                         Рассчитать стоимость
                         </button>
                     </div>
@@ -133,8 +89,8 @@
                     <div class = "tour">
                         <img src = "img/kavkaz.jpg" class = "tour_img">
                         <p>Море, солнце и горы !</p>
-                        <button type = "button" class = "btn btn-primary"
-                        data-toggle = "modal" data-target = "#myModal">
+                        <button class = "btn btn-primary"
+                        onclick="openModal('myModal')">
                         Рассчитать стоимость
                         </button>
                     </div>
@@ -145,8 +101,8 @@
                     <div class = "tour">
                         <img src = "img/altay.jpg" class = "tour_img">
                         <p> Незабываемые впечатления !</p>
-                        <button type = "button" class = "btn btn-primary"
-                        data-toggle = "modal" data-target = "#myModal">
+                        <button class = "btn btn-primary"
+                        onclick="openModal('myModal')">
                         Рассчитать стоимость
                         </button>
                     </div>
@@ -159,38 +115,30 @@
             <div class="col">Это сайт, предназначенный для обучения</div>
         </div>
     </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="travel/js/bootstrap.esm.min.js"></script>
-<script>
-    $('#orderForm').on('submit', function ()
-    {
-        let tour = $("#inp1").val();
-        let date = new Date($("#inp2").val());
-        let month = date.getMonth();
-        let kol = $("#inp3").val();
-        kol = Number(kol);
-        let email = $("#inp4").val();
-        let stoim = 0;
-        if (tour == 'Крым')
-        {
-            if((month == 5)||(month == 6)||(month == 7)||(month == 8))
-                {stoim = kol*500;}
-            else {stoim = kol*300;}
-        }
-        if (tour == 'Кавказ')
-        {
-            if((month == 12)||(month == 1)||(month == 2)||(month ==5)||(month == 6)||(month == 7)||(month == 8))
-                {stoim = kol*300;}
-            else {stoim = kol*250;}
-        }
-        if (tour == 'Алтай')
-        {
-            {stoim = kol*1000;}
-        }
-        alert ( `Примерная стоимость вашего тура на ${kol} человек
-        составит ${stoim} у.е. Мы свяжемся с ВАМИ !! `);
-    }
-    );
-</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="travel/js/bootstrap.bundle.min.js"></script> <!-- Изменен на bootstrap.bundle.min.js -->
+    <script>
+        $('#orderForm').on('submit', function () {
+            let tour = $("#inp1").val();
+            let date = new Date($("#inp2").val());
+            let month = date.getMonth();
+            let kol = $("#inp3").val();
+            kol = Number(kol);
+            let email = $("#inp4").val();
+            let stoim = 0;
+
+            if (tour == 'Крым') {
+                stoim = (month >= 5 && month <= 8) ? kol * 500 : kol * 300;
+            }
+            if (tour == 'Кавказ') {
+                stoim = [12, 1, 2, 5, 6, 7, 8].includes(month) ? kol * 300 : kol * 250;
+            }
+            if (tour == 'Алтай') {
+                stoim = kol * 1000;
+            }
+
+            alert(`Примерная стоимость вашего тура на ${kol} человек составит ${stoim} у.е. Мы свяжемся с Вами!`);
+        });
+    </script>
 </body>
 </html>
